@@ -5,6 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>NovaGrid Techno — Web Design & Development Studio</title>
 <meta name="description" content="NovaGrid Techno is a web design and development studio building fast, modern websites for growing businesses. See our live client work.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%234d7cff'/%3E%3Cstop offset='1' stop-color='%237c5cff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='8' fill='url(%23g)'/%3E%3Ctext x='16' y='22' font-family='Arial,sans-serif' font-size='18' font-weight='800' fill='%23fff' text-anchor='middle'%3EN%3C/text%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:title" content="NovaGrid Techno — Web Design & Development Studio">
+<meta property="og:description" content="A small, fast-moving web design studio building real, working websites for growing businesses. See our live client work.">
+<meta property="og:url" content="https://desolatemartial553.github.io/novagrid-techno/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="NovaGrid Techno — Web Design & Development Studio">
+<meta name="twitter:description" content="A small, fast-moving web design studio building real, working websites for growing businesses.">
 <style>
   :root{
     --bg:#0a0e17;
@@ -172,6 +180,65 @@
   .service-card h3{font-size:1.1rem;font-weight:700;margin-bottom:8px;}
   .service-card p{color:var(--ink-soft);font-size:0.92rem;}
 
+  /* Reveal on scroll */
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .5s ease, transform .5s ease;}
+  .reveal.in{opacity:1;transform:translateY(0);}
+
+  /* Process */
+  .process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;counter-reset:step;}
+  .process-card{position:relative;background:var(--card);border:1px solid var(--border);border-radius:16px;padding:28px 24px;}
+  .process-card::before{
+    counter-increment:step;content:"0" counter(step);
+    font-size:2.2rem;font-weight:800;
+    background:linear-gradient(135deg,var(--accent),var(--accent2));
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+    display:block;margin-bottom:14px;
+  }
+  .process-card h3{font-size:1.05rem;font-weight:700;margin-bottom:8px;}
+  .process-card p{color:var(--ink-soft);font-size:0.9rem;}
+  .process-arrow{display:none;}
+  @media (max-width:840px){.process-grid{grid-template-columns:1fr 1fr;}}
+  @media (max-width:480px){.process-grid{grid-template-columns:1fr;}}
+
+  /* Testimonials */
+  .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+  .testi-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:28px;display:flex;flex-direction:column;}
+  .testi-stars{color:#ffb84d;letter-spacing:2px;margin-bottom:14px;font-size:0.95rem;}
+  .testi-card p{color:var(--ink);font-size:0.95rem;flex:1;margin-bottom:16px;}
+  .testi-who strong{display:block;font-size:0.88rem;}
+  .testi-who span{color:var(--ink-soft);font-size:0.78rem;}
+  .testi-note{text-align:center;color:var(--ink-soft);font-size:0.78rem;margin-top:30px;opacity:0.75;}
+  @media (max-width:840px){.testi-grid{grid-template-columns:1fr;}}
+
+  /* FAQ */
+  .faq-list{max-width:760px;margin:0 auto;}
+  .faq-item{border-bottom:1px solid var(--border);}
+  .faq-q{
+    display:flex;justify-content:space-between;align-items:center;gap:16px;
+    padding:22px 4px;cursor:pointer;font-weight:700;font-size:1rem;
+  }
+  .faq-q .plus{font-size:1.4rem;color:var(--accent);transition:transform .25s ease;flex:none;}
+  .faq-item.open .plus{transform:rotate(45deg);}
+  .faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease;color:var(--ink-soft);font-size:0.92rem;}
+  .faq-a-inner{padding:0 4px 22px;}
+  .faq-item.open .faq-a{max-height:220px;}
+
+  /* Contact form */
+  .contact-form{display:flex;flex-direction:column;gap:14px;position:relative;width:100%;}
+  .contact-form input,.contact-form textarea{
+    width:100%;padding:14px 16px;border-radius:10px;
+    background:var(--bg-alt);border:1px solid var(--border);color:var(--ink);
+    font-family:inherit;font-size:0.95rem;resize:vertical;
+  }
+  .contact-form input:focus,.contact-form textarea:focus{outline:none;border-color:var(--accent);}
+  .contact-form button{
+    background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;
+    border:none;padding:14px 26px;border-radius:10px;font-weight:700;font-size:0.95rem;cursor:pointer;
+  }
+  .contact-form button:hover{filter:brightness(1.1);}
+  .contact-divider{display:flex;align-items:center;gap:14px;color:var(--ink-soft);font-size:0.8rem;margin:26px 0;position:relative;}
+  .contact-divider::before,.contact-divider::after{content:'';flex:1;height:1px;background:var(--border);}
+
   /* Work / projects */
   .project-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;}
   .project-card{
@@ -260,6 +327,7 @@
         <li><a href="#about">About</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#work">Our Work</a></li>
+        <li><a href="#faq">FAQ</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -291,13 +359,13 @@
 
 <section class="section" id="about">
   <div class="section-inner about-grid">
-    <div>
+    <div class="reveal">
       <span class="tag">About Us</span>
       <h2>An up-and-coming studio, built on real results</h2>
       <p>NovaGrid Techno started with a simple observation: a lot of good local businesses in and around Birmingham still don't have a website worth having. We set out to fix that — building full, working sites first, so owners could see exactly what a proper web presence looks like before committing to anything.</p>
       <p>That approach became our whole method. We design every site from scratch around the business it's for, write copy that actually reflects how that business talks about itself, and ship it live rather than leaving it as a mockup. Our growing portfolio of live client work speaks for itself.</p>
     </div>
-    <div class="mission-card">
+    <div class="mission-card reveal">
       <h3>Our approach</h3>
       <p>No page builders. No recycled templates. Every project gets its own layout, its own copy, and gets tested live in a real browser before we call it done. We build small, and we build it right.</p>
     </div>
@@ -306,38 +374,38 @@
 
 <section class="section section-alt" id="services">
   <div class="section-inner">
-    <div class="section-head">
+    <div class="section-head reveal">
       <span class="tag">What We Do</span>
       <h2>Full-service web design &amp; development</h2>
       <p>From first concept to a live, working URL.</p>
     </div>
     <div class="services-grid">
-      <div class="service-card">
+      <div class="service-card reveal">
         <div class="icon">🎨</div>
         <h3>Custom Web Design</h3>
         <p>Distinct visual identity per client — never a recolored template.</p>
       </div>
-      <div class="service-card">
+      <div class="service-card reveal">
         <div class="icon">💻</div>
         <h3>Front-End Development</h3>
         <p>Clean, hand-built HTML, CSS and JavaScript, optimised to load fast.</p>
       </div>
-      <div class="service-card">
+      <div class="service-card reveal">
         <div class="icon">📱</div>
         <h3>Responsive Builds</h3>
         <p>Every site designed mobile-first and tested across real devices.</p>
       </div>
-      <div class="service-card">
+      <div class="service-card reveal">
         <div class="icon">🧭</div>
         <h3>Local Business Strategy</h3>
         <p>Maps, reviews, hours and contact CTAs placed where customers expect them.</p>
       </div>
-      <div class="service-card">
+      <div class="service-card reveal">
         <div class="icon">🚀</div>
         <h3>Deployment &amp; Hosting</h3>
         <p>We take sites from local files to a real, live URL clients can share.</p>
       </div>
-      <div class="service-card">
+      <div class="service-card reveal">
         <div class="icon">🔧</div>
         <h3>Ongoing Updates</h3>
         <p>Sites stay editable after launch — changes go live within minutes.</p>
@@ -346,9 +414,37 @@
   </div>
 </section>
 
-<section class="section" id="work">
+<section class="section" id="process">
   <div class="section-inner">
-    <div class="section-head">
+    <div class="section-head reveal">
+      <span class="tag">How We Work</span>
+      <h2>From first message to a live URL</h2>
+      <p>The same four steps, every time — no surprises along the way.</p>
+    </div>
+    <div class="process-grid">
+      <div class="process-card reveal">
+        <h3>Discover</h3>
+        <p>We learn about your business, your customers, and what a website actually needs to do for you.</p>
+      </div>
+      <div class="process-card reveal">
+        <h3>Design</h3>
+        <p>A layout and visual identity built specifically for your business — never a recolored template.</p>
+      </div>
+      <div class="process-card reveal">
+        <h3>Build</h3>
+        <p>Hand-written HTML, CSS and JavaScript, tested live in a real browser on real devices.</p>
+      </div>
+      <div class="process-card reveal">
+        <h3>Launch</h3>
+        <p>Your site goes live on a real URL you can share — with room to keep improving it after.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" id="work">
+  <div class="section-inner">
+    <div class="section-head reveal">
       <span class="tag">Case Studies</span>
       <h2>Client work, live in the wild</h2>
       <p>Eight local Northfield businesses, eight fully custom, live websites.</p>
@@ -357,11 +453,76 @@
   </div>
 </section>
 
-<section class="section section-alt" id="contact">
+<section class="section" id="testimonials">
   <div class="section-inner">
-    <div class="contact-box">
+    <div class="section-head reveal">
+      <span class="tag">Client Feedback</span>
+      <h2>What it's like to work with us</h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card reveal">
+        <div class="testi-stars">★★★★★</div>
+        <p>"I'd been putting off getting a website for years. Within a week I had something live that actually looked like my shop, not a generic template."</p>
+        <div class="testi-who"><strong>Local retailer</strong><span>Northfield, Birmingham</span></div>
+      </div>
+      <div class="testi-card reveal">
+        <div class="testi-stars">★★★★★</div>
+        <p>"They actually tested everything on my phone before calling it done. Every button and link just works — that shouldn't feel rare, but it does."</p>
+        <div class="testi-who"><strong>Trades business owner</strong><span>Birmingham</span></div>
+      </div>
+      <div class="testi-card reveal">
+        <div class="testi-stars">★★★★★</div>
+        <p>"Fast, straightforward, and they clearly wrote the copy after actually understanding what we do — not generic filler text."</p>
+        <div class="testi-who"><strong>Hospitality business owner</strong><span>Northfield, Birmingham</span></div>
+      </div>
+    </div>
+    <p class="testi-note">Illustrative feedback — real client testimonials will replace these as they come in.</p>
+  </div>
+</section>
+
+<section class="section section-alt" id="faq">
+  <div class="section-inner">
+    <div class="section-head reveal">
+      <span class="tag">Good To Know</span>
+      <h2>Frequently asked questions</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item reveal">
+        <div class="faq-q">How much does a website cost? <span class="plus">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">It depends on scope — every project is priced individually rather than off a fixed menu. Message us with what you need and we'll give you a straight answer.</div></div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q">How long does a project take? <span class="plus">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">Most small business sites go from first conversation to a live URL within one to two weeks, depending on how much content you have ready.</div></div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q">Do you only work with Birmingham businesses? <span class="plus">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">Birmingham is where we started, but we work with small businesses anywhere — everything is built and delivered remotely.</div></div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q">Can you update the site after it's live? <span class="plus">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">Yes — ongoing updates are part of what we offer. Most content or copy changes go live within minutes of a request.</div></div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q">Do you build the site before I commit to anything? <span class="plus">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">Often, yes. We'd rather show you a real, working concept of your site than ask you to commit based on a pitch alone.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="contact">
+  <div class="section-inner">
+    <div class="contact-box reveal">
       <h2>Let's build something real</h2>
       <p>Tell us about your business and we'll put together a live concept for you to look at.</p>
+      <form class="contact-form" id="contactForm">
+        <input type="text" name="name" placeholder="Your name" required>
+        <input type="text" name="business" placeholder="Business name">
+        <textarea name="message" rows="4" placeholder="Tell us a bit about what you need" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+      <div class="contact-divider">or reach us directly</div>
       <div class="contact-methods">
         <a href="mailto:novagridtechno@gmail.com">✉️ novagridtechno@gmail.com</a>
       </div>
@@ -376,22 +537,22 @@
 
 <script>
   const projects = [
-    {name:"Bright Products", tag:"Hardware & Home Essentials", desc:"Northfield Shopping Centre retailer for everyday hardware and home essentials.", color:"#2f855a", img:"https://images.pexels.com/photos/38575493/pexels-photo-38575493.jpeg?auto=compress&cs=tinysrgb&w=800", live:"https://desolatemartial553.github.io/bright-products/"},
-    {name:"Little Italy Menswear", tag:"Menswear · 3 Locations", desc:"Multi-location menswear outfitter with a classic, tailored brand feel.", color:"#6b46c1", img:"https://images.pexels.com/photos/6765639/pexels-photo-6765639.jpeg?auto=compress&cs=tinysrgb&w=800", live:"https://desolatemartial553.github.io/little-italy-menswear/"},
-    {name:"Church Hill Autos", tag:"MOT & Servicing Garage", desc:"Station Rd garage offering MOTs, servicing and repairs.", color:"#2b6cb0", img:"https://images.pexels.com/photos/8985667/pexels-photo-8985667.jpeg?auto=compress&cs=tinysrgb&w=800", live:"https://desolatemartial553.github.io/church-hill-autos/"},
-    {name:"Aladdins Longbridge", tag:"Takeaway", desc:"Pizza, kebab and fried chicken takeaway serving Longbridge.", color:"#c05621", img:"https://images.pexels.com/photos/5017837/pexels-photo-5017837.jpeg?auto=compress&cs=tinysrgb&w=800", live:"https://desolatemartial553.github.io/aladdins-longbridge/"},
-    {name:"Denada's D&D Hairsalon", tag:"Hair Salon", desc:"Full-service hair salon site with booking-focused layout.", color:"#b83280", img:"https://images.pexels.com/photos/7195805/pexels-photo-7195805.jpeg?auto=compress&cs=tinysrgb&w=800", live:"https://desolatemartial553.github.io/dd-hairsalon/"},
-    {name:"Backyard Bar & Grill", tag:"Bar & Restaurant", desc:"Local bar and grill with a menu-forward, sociable design.", color:"#975a16", img:"https://images.pexels.com/photos/33749073/pexels-photo-33749073.jpeg?auto=compress&cs=tinysrgb&w=800", live:"https://desolatemartial553.github.io/backyard-bar-grill/"},
-    {name:"Lani Builders", tag:"Building & Construction", desc:"Construction and building firm site built around trust and past work.", color:"#4a5568", img:"https://images.pexels.com/photos/33257996/pexels-photo-33257996.jpeg?auto=compress&cs=tinysrgb&w=800", live:"https://desolatemartial553.github.io/lani-builders/"},
-    {name:"Bang Bang Bargain Clothes", tag:"Clothing Shop", desc:"Value clothing retailer with a bold, high-street feel.", color:"#4d7cff", img:"https://images.pexels.com/photos/26292716/pexels-photo-26292716.jpeg?auto=compress&cs=tinysrgb&w=800", live:"https://desolatemartial553.github.io/Bang-Bargain-Clothing-Store/"}
+    {name:"Bright Products", badge:"BP", tag:"Hardware & Home Essentials", desc:"Northfield Shopping Centre retailer for everyday hardware and home essentials.", color:"#2f855a", img:"https://images.pexels.com/photos/38575493/pexels-photo-38575493.jpeg?auto=compress&cs=tinysrgb&w=800", live:"https://desolatemartial553.github.io/bright-products/"},
+    {name:"Little Italy Menswear", badge:"LI", tag:"Menswear · 3 Locations", desc:"Multi-location menswear outfitter with a classic, tailored brand feel.", color:"#6b46c1", img:"https://images.pexels.com/photos/6765639/pexels-photo-6765639.jpeg?auto=compress&cs=tinysrgb&w=800", live:"https://desolatemartial553.github.io/little-italy-menswear/"},
+    {name:"Church Hill Autos", badge:"CH", tag:"MOT & Servicing Garage", desc:"Station Rd garage offering MOTs, servicing and repairs.", color:"#2b6cb0", img:"https://images.pexels.com/photos/8985667/pexels-photo-8985667.jpeg?auto=compress&cs=tinysrgb&w=800", live:"https://desolatemartial553.github.io/church-hill-autos/"},
+    {name:"Aladdins Longbridge", badge:"AL", tag:"Takeaway", desc:"Pizza, kebab and fried chicken takeaway serving Longbridge.", color:"#c05621", img:"https://images.pexels.com/photos/5017837/pexels-photo-5017837.jpeg?auto=compress&cs=tinysrgb&w=800", live:"https://desolatemartial553.github.io/aladdins-longbridge/"},
+    {name:"Denada's D&D Hairsalon", badge:"DD", tag:"Hair Salon", desc:"Full-service hair salon site with booking-focused layout.", color:"#b83280", img:"https://images.pexels.com/photos/7195805/pexels-photo-7195805.jpeg?auto=compress&cs=tinysrgb&w=800", live:"https://desolatemartial553.github.io/dd-hairsalon/"},
+    {name:"Backyard Bar & Grill", badge:"BG", tag:"Bar & Restaurant", desc:"Local bar and grill with a menu-forward, sociable design.", color:"#975a16", img:"https://images.pexels.com/photos/33749073/pexels-photo-33749073.jpeg?auto=compress&cs=tinysrgb&w=800", live:"https://desolatemartial553.github.io/backyard-bar-grill/"},
+    {name:"Lani Builders", badge:"LB", tag:"Building & Construction", desc:"Construction and building firm site built around trust and past work.", color:"#4a5568", img:"https://images.pexels.com/photos/33257996/pexels-photo-33257996.jpeg?auto=compress&cs=tinysrgb&w=800", live:"https://desolatemartial553.github.io/lani-builders/"},
+    {name:"Bang Bang Bargain Clothes", badge:"BB", tag:"Clothing Shop", desc:"Value clothing retailer with a bold, high-street feel.", color:"#4d7cff", img:"https://images.pexels.com/photos/26292716/pexels-photo-26292716.jpeg?auto=compress&cs=tinysrgb&w=800", live:"https://desolatemartial553.github.io/Bang-Bargain-Clothing-Store/"}
   ];
 
   const grid = document.getElementById('projectGrid');
   grid.innerHTML = projects.map((p,i) => `
-    <div class="project-card${(i===0||i===4)?' featured':''}">
+    <div class="project-card reveal${(i===0||i===4)?' featured':''}">
       <div class="project-thumb">
         <img src="${p.img}" alt="${p.name} website preview" loading="lazy">
-        <span class="thumb-badge">${p.name.split(' ').map(w=>w[0]).slice(0,2).join('')}</span>
+        <span class="thumb-badge">${p.badge}</span>
         <span class="bar"></span>
       </div>
       <div class="project-body">
@@ -432,6 +593,50 @@
       window.scrollTo({top, behavior:'smooth'});
     });
   });
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-item').forEach(item => {
+    item.querySelector('.faq-q').addEventListener('click', () => {
+      const wasOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!wasOpen) item.classList.add('open');
+    });
+  });
+
+  // Scroll reveal — anything already on screen at load reveals instantly,
+  // avoiding a race with the observer's first async tick.
+  const revealEls = document.querySelectorAll('.reveal');
+  function isInViewport(el){
+    const r = el.getBoundingClientRect();
+    return r.top < window.innerHeight && r.bottom > 0;
+  }
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, {threshold:0, rootMargin:'0px 0px 200px 0px'});
+  revealEls.forEach(el => {
+    if (isInViewport(el)) el.classList.add('in');
+    else revealObserver.observe(el);
+  });
+
+  // Contact form — no backend, so this builds a pre-filled mailto: link
+  // from the fields and hands off to the visitor's own email client.
+  const contactForm = document.getElementById('contactForm');
+  if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = contactForm.name.value.trim();
+      const business = contactForm.business.value.trim();
+      const message = contactForm.message.value.trim();
+      const subject = `New project enquiry${business ? ' — ' + business : ''}`;
+      const body = `Name: ${name}\nBusiness: ${business || 'N/A'}\n\n${message}`;
+      window.location.href = `mailto:novagridtechno@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    });
+  }
 </script>
 
 </body>
