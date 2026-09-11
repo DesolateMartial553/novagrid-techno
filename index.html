@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>NovaGrid Techno — Web Design & Development Studio</title>
 <meta name="description" content="NovaGrid Techno is a web design and development studio building fast, modern websites for growing businesses. See our live client work.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%234d7cff'/%3E%3Cstop offset='1' stop-color='%237c5cff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='8' fill='url(%23g)'/%3E%3Ctext x='16' y='22' font-family='Arial,sans-serif' font-size='18' font-weight='800' fill='%23fff' text-anchor='middle'%3EN%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23d9a24a'/%3E%3Cstop offset='1' stop-color='%23c1502e'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='8' fill='url(%23g)'/%3E%3Ctext x='16' y='22' font-family='Arial,sans-serif' font-size='18' font-weight='800' fill='%23fff' text-anchor='middle'%3EN%3C/text%3E%3C/svg%3E">
 <meta property="og:type" content="website">
 <meta property="og:title" content="NovaGrid Techno — Web Design & Development Studio">
 <meta property="og:description" content="A small, fast-moving web design studio building real, working websites for growing businesses. See our live client work.">
@@ -15,14 +15,14 @@
 <meta name="twitter:description" content="A small, fast-moving web design studio building real, working websites for growing businesses.">
 <style>
   :root{
-    --bg:#0a0e17;
-    --bg-alt:#101627;
-    --card:#131a2b;
-    --border:#232b42;
-    --ink:#eef1fa;
-    --ink-soft:#9aa4c0;
-    --accent:#4d7cff;
-    --accent2:#7c5cff;
+    --bg:#14100c;
+    --bg-alt:#1c1610;
+    --card:#211a13;
+    --border:#372c1f;
+    --ink:#f6efe2;
+    --ink-soft:#b7a793;
+    --accent:#d9a24a;
+    --accent2:#c1502e;
     --header-h:76px;
   }
   *{margin:0;padding:0;box-sizing:border-box;}
@@ -33,8 +33,8 @@
     color:var(--ink);
     line-height:1.6;
     background-image:
-      radial-gradient(circle at 15% 10%, rgba(77,124,255,0.12), transparent 40%),
-      radial-gradient(circle at 85% 25%, rgba(124,92,255,0.12), transparent 40%);
+      radial-gradient(circle at 15% 10%, rgba(217,162,74,0.12), transparent 40%),
+      radial-gradient(circle at 85% 25%, rgba(193,80,46,0.12), transparent 40%);
     background-attachment:fixed;
   }
   a{color:inherit;text-decoration:none;}
@@ -44,7 +44,7 @@
   header{
     position:fixed;top:0;left:0;right:0;
     height:var(--header-h);
-    background:rgba(10,14,23,0.85);
+    background:rgba(20,16,12,0.85);
     backdrop-filter:blur(10px);
     border-bottom:1px solid var(--border);
     z-index:1000;
@@ -90,7 +90,7 @@
     .nav-cta{display:none;}
     .menu-scrim{
       display:none;position:fixed;inset:0;top:var(--header-h);
-      background:rgba(5,7,12,0.6);z-index:999;
+      background:rgba(8,6,4,0.65);z-index:999;
     }
     .menu-scrim.open{display:block;}
   }
@@ -121,8 +121,8 @@
     padding:15px 30px;border-radius:9px;font-weight:700;font-size:0.95rem;
     display:inline-block;transition:transform .2s ease, box-shadow .2s ease;
   }
-  .btn-primary{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;box-shadow:0 10px 30px rgba(77,124,255,0.3);}
-  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 14px 36px rgba(77,124,255,0.42);}
+  .btn-primary{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;box-shadow:0 10px 30px rgba(217,162,74,0.3);}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 14px 36px rgba(217,162,74,0.42);}
   .btn-outline{border:1.5px solid var(--border);color:var(--ink);background:var(--card);}
   .btn-outline:hover{border-color:var(--accent);transform:translateY(-2px);}
 
@@ -174,7 +174,7 @@
   .service-card:hover{transform:translateY(-6px);border-color:var(--accent);}
   .service-card .icon{
     width:46px;height:46px;border-radius:12px;
-    background:linear-gradient(135deg,rgba(77,124,255,0.18),rgba(124,92,255,0.18));
+    background:linear-gradient(135deg,rgba(217,162,74,0.18),rgba(193,80,46,0.18));
     display:flex;align-items:center;justify-content:center;font-size:1.4rem;margin-bottom:16px;
   }
   .service-card h3{font-size:1.1rem;font-weight:700;margin-bottom:8px;}
@@ -203,7 +203,7 @@
   /* Testimonials */
   .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
   .testi-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:28px;display:flex;flex-direction:column;}
-  .testi-stars{color:#ffb84d;letter-spacing:2px;margin-bottom:14px;font-size:0.95rem;}
+  .testi-stars{color:var(--accent);letter-spacing:2px;margin-bottom:14px;font-size:0.95rem;}
   .testi-card p{color:var(--ink);font-size:0.95rem;flex:1;margin-bottom:16px;}
   .testi-who strong{display:block;font-size:0.88rem;}
   .testi-who span{color:var(--ink-soft);font-size:0.78rem;}
@@ -254,14 +254,14 @@
   .project-card:hover .project-thumb img{transform:scale(1.07);}
   .project-thumb::after{
     content:'';position:absolute;inset:0;
-    background:linear-gradient(180deg, rgba(10,14,23,0) 55%, rgba(10,14,23,0.55) 100%),
-      linear-gradient(180deg, rgba(77,124,255,0.1), rgba(124,92,255,0.1));
+    background:linear-gradient(180deg, rgba(20,16,12,0) 55%, rgba(20,16,12,0.55) 100%),
+      linear-gradient(180deg, rgba(217,162,74,0.1), rgba(193,80,46,0.1));
   }
   .project-thumb .bar{position:absolute;left:0;right:0;bottom:0;height:3px;background:linear-gradient(90deg,var(--accent),var(--accent2));}
   .thumb-badge{
     position:absolute;top:12px;left:12px;color:#fff;font-weight:800;font-size:0.8rem;
     padding:5px 11px;border-radius:8px;letter-spacing:0.5px;
-    background:rgba(10,14,23,0.75);border:1px solid var(--border);backdrop-filter:blur(4px);
+    background:rgba(20,16,12,0.75);border:1px solid var(--border);backdrop-filter:blur(4px);
     z-index:1;
   }
   .project-card.featured{grid-column:1/-1;flex-direction:row;}
@@ -276,7 +276,7 @@
   .project-body{padding:22px;display:flex;flex-direction:column;gap:10px;flex:1;}
   .project-tag{
     font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;
-    color:var(--accent);background:rgba(77,124,255,0.12);padding:4px 10px;border-radius:20px;
+    color:var(--accent);background:rgba(217,162,74,0.12);padding:4px 10px;border-radius:20px;
     align-self:flex-start;
   }
   .project-body h3{font-size:1.15rem;font-weight:800;}
@@ -298,7 +298,7 @@
   }
   .contact-box::before{
     content:'';position:absolute;inset:0;
-    background:radial-gradient(circle at 50% 0%, rgba(77,124,255,0.15), transparent 60%);
+    background:radial-gradient(circle at 50% 0%, rgba(217,162,74,0.15), transparent 60%);
     pointer-events:none;
   }
   .contact-box h2{font-size:2rem;font-weight:800;margin-bottom:14px;position:relative;}
@@ -544,7 +544,7 @@
     {name:"Denada's D&D Hairsalon", badge:"DD", tag:"Hair Salon", desc:"Full-service hair salon site with booking-focused layout.", color:"#b83280", img:"https://images.pexels.com/photos/7195805/pexels-photo-7195805.jpeg?auto=compress&cs=tinysrgb&w=800", live:"https://desolatemartial553.github.io/dd-hairsalon/"},
     {name:"Backyard Bar & Grill", badge:"BG", tag:"Bar & Restaurant", desc:"Local bar and grill with a menu-forward, sociable design.", color:"#975a16", img:"https://images.pexels.com/photos/33749073/pexels-photo-33749073.jpeg?auto=compress&cs=tinysrgb&w=800", live:"https://desolatemartial553.github.io/backyard-bar-grill/"},
     {name:"Lani Builders", badge:"LB", tag:"Building & Construction", desc:"Construction and building firm site built around trust and past work.", color:"#4a5568", img:"https://images.pexels.com/photos/33257996/pexels-photo-33257996.jpeg?auto=compress&cs=tinysrgb&w=800", live:"https://desolatemartial553.github.io/lani-builders/"},
-    {name:"Bang Bang Bargain Clothes", badge:"BB", tag:"Clothing Shop", desc:"Value clothing retailer with a bold, high-street feel.", color:"#4d7cff", img:"https://images.pexels.com/photos/26292716/pexels-photo-26292716.jpeg?auto=compress&cs=tinysrgb&w=800", live:"https://desolatemartial553.github.io/Bang-Bargain-Clothing-Store/"}
+    {name:"Bang Bang Bargain Clothes", badge:"BB", tag:"Clothing Shop", desc:"Value clothing retailer with a bold, high-street feel.", color:"#e8402a", img:"https://images.pexels.com/photos/26292716/pexels-photo-26292716.jpeg?auto=compress&cs=tinysrgb&w=800", live:"https://desolatemartial553.github.io/Bang-Bargain-Clothing-Store/"}
   ];
 
   const grid = document.getElementById('projectGrid');
