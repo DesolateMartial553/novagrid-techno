@@ -77,17 +77,7 @@
     outline:3px solid var(--ink);outline-offset:3px;
   }
   footer a:focus-visible{outline-color:var(--cream);}
-  /* .hero-explore is a real descendant of .hero-media so the rule below
-     covers it, but .hero-cta-pill is a DOM sibling that only overlaps
-     the photo visually (via the desktop grid-overlap technique), so it
-     needs its own rule rather than relying on a descendant selector.
-     Since it can sit over either the cream page or the photo depending
-     on viewport width, a self-contained two-tone ring (cream then ink)
-     stays visible against either. */
   .hero-media :is(a,button):focus-visible{outline-color:var(--cream);}
-  .hero-cta-pill:focus-visible{
-    outline:none;box-shadow:0 0 0 3px var(--cream), 0 0 0 6px var(--ink);
-  }
 
   /* Header */
   header{
@@ -186,13 +176,6 @@
     font-size:clamp(2.4rem,7.4vw,5.6rem);line-height:0.94;
   }
   .hero-headline .line{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;}
-  .hero-cta-pill{
-    display:inline-block;margin-top:28px;
-    background:linear-gradient(135deg,var(--accent),var(--accent-dark));color:var(--cream);border-radius:999px;
-    padding:16px 30px;font-weight:800;font-size:0.88rem;letter-spacing:0.03em;text-transform:uppercase;
-    box-shadow:0 12px 28px rgba(168,54,24,0.3);
-  }
-  .hero-cta-pill:hover{filter:brightness(1.08);}
   /* Decorative secondary chip photo — only shown at the wider breakpoint
      where there's room to place it as a small inset image; at mobile
      width it would otherwise render as an unconstrained full-width
@@ -225,18 +208,11 @@
     }
     .hero-media{grid-column:1;grid-row:1/-1;aspect-ratio:auto;}
     /* Removes hero-copy's own box from layout so its children become
-       direct grid items of .hero-inner — lets the headline/pill overlap
-       the image (same grid row, different z-index) without any fragile
+       direct grid items of .hero-inner — lets the headline overlap the
+       image (same grid row, different z-index) without any fragile
        percentage-of-absolute-parent math. */
     .hero-copy{display:contents;}
     .hero-headline{grid-column:1/-1;grid-row:1;align-self:start;z-index:1;padding:24px 40px 0 40px;}
-    .hero-cta-pill{
-      grid-column:1/-1;grid-row:1;align-self:center;justify-self:center;z-index:3;
-      background:linear-gradient(135deg,var(--accent),var(--accent-dark));color:var(--cream);border:none;border-radius:999px;
-      padding:20px 34px;font-weight:800;font-size:0.92rem;letter-spacing:0.03em;text-transform:uppercase;
-      white-space:nowrap;box-shadow:0 14px 34px rgba(168,54,24,0.35);
-    }
-    .hero-cta-pill:hover{filter:brightness(1.08);}
     .hero-chip{
       display:block;grid-column:2;grid-row:1;align-self:end;justify-self:end;
       width:220px;aspect-ratio:4/3;margin:0 6% 24px 0;
@@ -403,7 +379,6 @@
         <span class="line">WEB PRESENCE</span>
         <span class="line">YOU DESERVE</span>
       </h1>
-      <a href="#contact" class="hero-cta-pill">Start a Project</a>
       <div class="hero-chip">
         <img src="https://images.pexels.com/photos/8985667/pexels-photo-8985667.jpeg?auto=compress&cs=tinysrgb&w=700&fm=webp" alt="" loading="lazy">
       </div>
