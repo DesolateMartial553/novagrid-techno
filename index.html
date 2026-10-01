@@ -4,14 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>NovaGrid Techno — Web Design & Development Studio</title>
-<meta name="description" content="NovaGrid Techno is a Birmingham, UK web design and development studio building fast, custom websites for growing local businesses — see our live client work below.">
+<meta name="description" content="NovaGrid Techno is a Birmingham, UK web design and development studio building fast, custom websites for local businesses. See the concept sites we've built for Northfield businesses.">
 <link rel="canonical" href="https://desolatemartial553.github.io/novagrid-techno/">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%18221a'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='18' font-weight='700' fill='%23b08d4f' text-anchor='middle'%3EN%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%23182219'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='18' font-weight='700' fill='%23b08d4f' text-anchor='middle'%3EN%3C/text%3E%3C/svg%3E">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta name="theme-color" content="#182219">
 <meta property="og:type" content="website">
 <meta property="og:title" content="NovaGrid Techno — Web Design & Development Studio">
-<meta property="og:description" content="A small, fast-moving web design studio building real, working websites for growing businesses. See our live client work.">
+<meta property="og:description" content="A small, fast-moving web design studio building real, working websites for growing businesses. See the concept sites we've built for Northfield businesses.">
 <meta property="og:url" content="https://desolatemartial553.github.io/novagrid-techno/">
 <meta property="og:image" content="https://desolatemartial553.github.io/novagrid-techno/og-image.jpg">
 <meta property="og:image:width" content="1200">
@@ -199,6 +199,11 @@
   .hero-stat{padding:20px 12px;text-align:center;}
   .hero-stat strong{display:block;font-family:'Playfair Display',serif;font-size:1.7rem;font-weight:700;color:var(--gold);}
   .hero-stat span{font-size:0.78rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.05em;}
+  @media (max-width:560px){
+    .hero-stats{gap:8px;}
+    .hero-stat{padding:16px 4px;}
+    .hero-stat span{display:block;font-size:0.68rem;letter-spacing:0.02em;text-wrap:balance;}
+  }
 
   /* Services / Process — numbered plates */
   .grid-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:24px;}
@@ -242,16 +247,6 @@
     border-bottom:1px solid var(--walnut);align-self:flex-start;
   }
   .project-link:hover{color:var(--gold-border);border-color:var(--gold-border);}
-
-  /* Testimonials */
-  .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
-  .testi-card{padding:30px;display:flex;flex-direction:column;}
-  .testi-mark{font-family:'Playfair Display',serif;font-size:3rem;font-weight:800;color:var(--gold-border);line-height:0.6;margin-bottom:14px;}
-  .testi-card p{color:var(--ink);font-size:1rem;font-style:italic;flex:1;margin-bottom:16px;}
-  .testi-who strong{display:block;font-size:0.9rem;color:var(--walnut);}
-  .testi-who span{color:var(--ink-soft);font-size:0.78rem;}
-  .testi-note{text-align:center;color:var(--muted);font-size:0.8rem;margin-top:34px;font-style:italic;}
-  @media (max-width:900px){.testi-grid{grid-template-columns:1fr;}}
 
   /* FAQ */
   .faq-list{max-width:820px;margin:0 auto;display:flex;flex-direction:column;gap:18px;}
@@ -323,8 +318,8 @@
     <nav aria-label="Primary">
       <ul id="navList">
         <li><a href="#services">Services</a></li>
-        <li><a href="#work">Work</a></li>
         <li><a href="#process">Process</a></li>
+        <li><a href="#work">Work</a></li>
         <li><a href="#faq">FAQ</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -344,7 +339,7 @@
 
 <section class="hero">
   <div class="hero-inner">
-    <span class="eyebrow">Now taking on new clients</span>
+    <span class="eyebrow">Now taking on new projects</span>
     <h1>We build the web presence <em>growing businesses</em> deserve.</h1>
     <p>NovaGrid Techno is a small, fast-moving web design and development studio. We design and ship real, working websites — not templates — for businesses that want to look as good online as they are in person.</p>
     <div class="btn-row">
@@ -356,9 +351,9 @@
     </div>
     <div class="ornament"><span class="mark"></span></div>
     <div class="hero-stats">
-      <div class="hero-stat"><strong>VIII</strong><span>Live Client Sites</span></div>
+      <div class="hero-stat"><strong>8</strong><span>Concept sites built</span></div>
       <div class="hero-stat"><strong>100%</strong><span>Custom-Built</span></div>
-      <div class="hero-stat"><strong>MMXXVI</strong><span>Founded</span></div>
+      <div class="hero-stat"><strong>2026</strong><span>Founded</span></div>
     </div>
   </div>
 </section>
@@ -374,7 +369,7 @@
       <div class="feature-card card reveal">
         <div class="feature-num" aria-hidden="true">I</div>
         <h3>Custom Web Design</h3>
-        <p>Distinct visual identity per client — never a recolored template.</p>
+        <p>Distinct visual identity per business — never a recolored template.</p>
       </div>
       <div class="feature-card card reveal">
         <div class="feature-num" aria-hidden="true">II</div>
@@ -394,7 +389,7 @@
       <div class="feature-card card reveal">
         <div class="feature-num" aria-hidden="true">V</div>
         <h3>Deployment &amp; Hosting</h3>
-        <p>We take sites from local files to a real, live URL clients can share.</p>
+        <p>We take sites from local files to a real URL you can share.</p>
       </div>
       <div class="feature-card card reveal">
         <div class="feature-num" aria-hidden="true">VI</div>
@@ -440,38 +435,52 @@
 <section class="section section-alt" id="work">
   <div class="section-inner">
     <div class="section-head reveal">
-      <span class="kicker">Case Studies</span>
-      <h2>Client Work, Live In The Wild</h2>
-      <p>Eight local Northfield businesses, eight fully custom, live websites.</p>
+      <span class="kicker">Concept Work</span>
+      <h2>Sites We've Built For Local Businesses</h2>
+      <p>Eight concept sites for real Northfield businesses that don't have a website yet. Each one is live, so you can click through it.</p>
     </div>
     <div class="project-grid" id="projectGrid"></div>
   </div>
 </section>
 
-<section class="section" id="testimonials">
+<section class="section" id="standards">
   <div class="section-inner">
     <div class="section-head reveal">
-      <span class="kicker">Client Feedback</span>
-      <h2>What It's Like To Work With Us</h2>
+      <span class="kicker">Our Standards</span>
+      <h2>What Every Site Gets</h2>
     </div>
-    <div class="testi-grid">
-      <div class="testi-card card reveal">
-        <div class="testi-mark" aria-hidden="true">&ldquo;</div>
-        <p>I'd been putting off getting a website for years. Within a week I had something live that actually looked like my shop, not a generic template.</p>
-        <div class="testi-who"><strong>Local Retailer</strong><span>Northfield, Birmingham</span></div>
+    <div class="grid-cards">
+      <div class="feature-card card reveal">
+        <div class="feature-num" aria-hidden="true">I</div>
+        <h3>Tested on a real phone</h3>
+        <p>Every button, link and menu is clicked through on mobile before launch.</p>
       </div>
-      <div class="testi-card card reveal">
-        <div class="testi-mark" aria-hidden="true">&ldquo;</div>
-        <p>They actually tested everything on my phone before calling it done. Every button and link just works — that shouldn't feel rare, but it does.</p>
-        <div class="testi-who"><strong>Trades Business Owner</strong><span>Birmingham</span></div>
+      <div class="feature-card card reveal">
+        <div class="feature-num" aria-hidden="true">II</div>
+        <h3>Fast by default</h3>
+        <p>Hand-written code, no page builder, and compressed images.</p>
       </div>
-      <div class="testi-card card reveal">
-        <div class="testi-mark" aria-hidden="true">&ldquo;</div>
-        <p>Fast, straightforward, and they clearly wrote the copy after actually understanding what we do — not generic filler text.</p>
-        <div class="testi-who"><strong>Hospitality Business Owner</strong><span>Northfield, Birmingham</span></div>
+      <div class="feature-card card reveal">
+        <div class="feature-num" aria-hidden="true">III</div>
+        <h3>Found on Google Maps</h3>
+        <p>Map, opening hours and address placed where customers look.</p>
+      </div>
+      <div class="feature-card card reveal">
+        <div class="feature-num" aria-hidden="true">IV</div>
+        <h3>One-tap contact</h3>
+        <p>Call and directions buttons stay easy to reach on mobile.</p>
+      </div>
+      <div class="feature-card card reveal">
+        <div class="feature-num" aria-hidden="true">V</div>
+        <h3>Copy written for your business</h3>
+        <p>Words shaped around what you do, without generic filler.</p>
+      </div>
+      <div class="feature-card card reveal">
+        <div class="feature-num" aria-hidden="true">VI</div>
+        <h3>You see it before you pay</h3>
+        <p>We build a free concept first so you can see the direction.</p>
       </div>
     </div>
-    <p class="testi-note">Illustrative feedback — real client testimonials will replace these as they come in.</p>
   </div>
 </section>
 
@@ -563,7 +572,7 @@
         <span class="project-tag">${p.tag}</span>
         <h3>${p.name}</h3>
         <p>${p.desc}</p>
-        <a class="project-link" href="${p.live}" target="_blank" rel="noopener" aria-label="View live site — ${p.name}">View Live ↗</a>
+        <a class="project-link" href="${p.live}" target="_blank" rel="noopener" aria-label="View concept site — ${p.name}">View concept site ↗</a>
       </div>
     </div>
   `).join('');
@@ -688,14 +697,14 @@
   }
 
   try {
-    const contactForm = document.getElementById('contactForm');
+    const enquiryForm = document.getElementById('contactForm');
     const formStatus = document.getElementById('formStatus');
-    if (contactForm) {
-      contactForm.addEventListener('submit', (e) => {
+    if (enquiryForm) {
+      enquiryForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        const name = contactForm.name.value.trim();
-        const business = contactForm.business.value.trim();
-        const message = contactForm.message.value.trim();
+        const name = enquiryForm.name.value.trim();
+        const business = enquiryForm.business.value.trim();
+        const message = enquiryForm.message.value.trim();
 
         if (!name || !message) {
           if (formStatus) {
@@ -710,7 +719,7 @@
         window.location.href = `mailto:novagridtechno@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
         if (formStatus) {
-          formStatus.textContent = "Opening your email client to send this. If nothing happens, email us directly at novagridtechno@gmail.com.";
+          formStatus.textContent = "Opening your email app to send this. If nothing happens, email us directly at novagridtechno@gmail.com.";
           formStatus.className = 'form-status';
         }
       });
