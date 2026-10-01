@@ -32,12 +32,13 @@
     document.querySelector('meta[name="theme-color"]').content = theme === 'dark' ? '#12100d' : '#f4efe6';
   } catch (err) {}
 </script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&amp;family=Instrument+Sans:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=optional">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&amp;family=Instrument+Sans:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=optional" media="print" onload="this.media='all'">
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&amp;family=Instrument+Sans:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=optional"></noscript>
+<link rel="preload" href="fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/instrument-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
 <style>
+/* Self-hosted fonts (SIL Open Font License), latin subset */
+@font-face{font-family:'Bricolage Grotesque';font-style:normal;font-weight:200 800;font-display:optional;src:url(fonts/bricolage-grotesque-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Instrument Sans';font-style:normal;font-weight:400 700;font-display:optional;src:url(fonts/instrument-sans-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'JetBrains Mono';font-style:normal;font-weight:400 800;font-display:optional;src:url(fonts/jetbrains-mono-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
 :root{--bg:#f4efe6;--surface:#fffaf2;--surface-2:#ebe4d8;--ink:#17140f;--muted:#5a5247;--line:#d8cdbb;--accent:#ce4118;--accent-ink:#b23a12;--accent-contrast:#fff;--green:#1f3a2c;--header-h:80px;color-scheme:light}
 [data-theme="dark"]{--bg:#12100d;--surface:#1b1814;--surface-2:#25211b;--ink:#f3ece0;--muted:#aaa08f;--line:#3a342b;--accent:#ff6a3d;--accent-ink:#ff8a63;--accent-contrast:#17140f;--green:#9cc5a8;color-scheme:dark}
 *{box-sizing:border-box;margin:0;padding:0}
@@ -319,7 +320,8 @@ footer{padding:32px 0}.footer-inner{display:flex;flex-wrap:wrap;justify-content:
         <a href="mailto:novagridtechno@gmail.com"><span aria-hidden="true">&#9993;</span> novagridtechno@gmail.com</a>
       </div>
     </div>
-    <form class="contact-form reveal" id="enquiryForm" novalidate action="mailto:novagridtechno@gmail.com" method="post" enctype="text/plain">
+    <form class="contact-form reveal" id="enquiryForm" novalidate>
+      <noscript><p class="field-error">This form needs JavaScript. You can email us directly at <a href="mailto:novagridtechno@gmail.com">novagridtechno@gmail.com</a>.</p></noscript>
       <div id="enquiryProgress"><p class="enquiry-progress" id="progressText" aria-live="polite">Step 1 of 3</p><div class="progress-bar" aria-hidden="true"><span class="active"></span><span></span><span></span></div></div>
       <fieldset class="step" data-step="1" aria-describedby="tradeError"><legend tabindex="-1">What kind of business do you run?</legend>
         <div class="choice-list">
