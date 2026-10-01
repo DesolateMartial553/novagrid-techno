@@ -21,6 +21,7 @@
 <meta name="twitter:description" content="Your business, online properly. Your first version, free. Hand-coded websites for local businesses in Northfield, Birmingham.">
 <meta name="twitter:image" content="https://desolatemartial553.github.io/novagrid-techno/og-image.jpg">
 <script>
+  document.documentElement.classList.add('js');
   // Apply the preference before rendering; storage may be unavailable.
   try {
     let saved;
@@ -72,6 +73,16 @@ footer{padding:32px 0}.footer-inner{display:flex;flex-wrap:wrap;justify-content:
 @media(max-width:900px){:root{--header-h:72px}.menu-toggle{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px}.nav-cta{display:none}nav ul{position:absolute;top:var(--header-h);left:0;right:0;flex-direction:column;gap:2px;padding:18px 24px;background:var(--surface);border-bottom:1px solid var(--line);box-shadow:0 16px 24px #17140f14;visibility:hidden;transform:translateY(-12px)}nav ul.open{visibility:visible;transform:none}nav a{font-size:1rem}.menu-scrim.open{display:block;position:fixed;inset:var(--header-h) 0 0;background:#17140f66;z-index:999}.hero{padding:48px 0 56px}.hero-inner{grid-template-columns:1fr;gap:40px}.hero-copy{max-width:640px}.hero h1{font-size:clamp(2.8rem,6.5vw,4rem)}.hero-copy>p{max-width:580px}.hero-stats{max-width:520px}.hero-visual{width:100%;max-width:660px;margin-inline:auto}.services-grid{gap:30px 24px}.standards-layout,.faq-layout{grid-template-columns:1fr;gap:0}.standards-list{gap:32px}.process-grid{gap:20px}.section{padding:64px 0}.contact-grid{grid-template-columns:1fr;gap:32px}.contact-copy h2{max-width:650px}.contact-copy>p{max-width:540px}}
 @media(max-width:700px){.wrap{width:calc(100% - 40px)}.hero h1{font-size:clamp(2.5rem,9.8vw,3.7rem)}.hero-copy>p{font-size:1rem}.eyebrow{font-size:.64rem;max-width:290px;margin-bottom:20px}.hero-stats{gap:12px;margin-top:30px}.hero-stat strong{font-size:1.65rem;white-space:nowrap}.hero-stat span{font-size:.7rem;text-wrap:balance}.hero .btn-row{flex-direction:column;align-items:stretch}.hero-visual{padding-left:16px}.phone-frame{margin-left:-16px;border-width:4px;border-radius:16px;width:31%}.hero-visual figcaption{font-size:.56rem;margin-top:-36px;margin-left:34%;min-height:50px}.hero-visual .browser-url{font-size:.47rem}.hero-visual .browser-bar{gap:6px}.work-grid{grid-template-columns:1fr;gap:32px}.section-head{margin-bottom:32px}.work-footer{align-items:flex-start;flex-direction:column}.services-grid,.standards-list{grid-template-columns:1fr}.services-grid{gap:24px}.feature{display:grid;grid-template-columns:32px 1fr;gap:10px 8px}.feature-num{grid-row:1/3;margin:2px 0 0}.feature h3{margin:0}.feature p{grid-column:2}.standards-list{gap:26px}.process-grid{grid-template-columns:1fr;gap:28px}.process-grid::before{top:24px;bottom:24px;left:23px;width:1px;height:auto;right:auto}.process-card{padding-left:72px;min-height:84px}.step-num{position:absolute;left:0;top:0;margin:0}.process-card h3{padding-top:3px;margin-bottom:10px}.process-card p{max-width:460px}.contact-form{padding:22px 18px}.contact-form button{width:100%}.footer-links{gap:8px 20px}.footer-brand p{max-width:280px}.mobile-cta{position:fixed;bottom:0;left:0;right:0;z-index:900;display:grid;grid-template-columns:1.6fr 1fr;gap:10px;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:var(--bg);border-top:1px solid var(--line)}.mobile-cta .btn{font-size:.8rem;padding-inline:10px;min-height:46px}body{padding-bottom:calc(78px + env(safe-area-inset-bottom))}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+.visually-hidden{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.work-tools{display:flex;flex-wrap:wrap;gap:18px 28px;max-width:100%;min-width:0;margin:-4px 0 30px;padding:18px;background:var(--surface);border:1px solid var(--line);border-radius:10px}
+.tool-group{min-width:0;max-width:100%;display:flex;flex-direction:column;gap:7px}.tool-group:first-child{flex:1 1 590px}.tool-group:nth-child(2){flex:0 1 310px}.tool-label{font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted)}
+.tool-scroll{display:flex;gap:6px;max-width:100%;overflow-x:auto;scrollbar-width:thin;padding:2px 2px 5px}.tool-scroll button{flex:none;min-height:44px;padding:8px 12px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--ink);font-size:.8rem;font-weight:600;white-space:nowrap}.tool-scroll button:hover{border-color:var(--muted)}.tool-scroll button[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--bg)}.tool-count{margin-left:3px;opacity:.75}
+.work-scores{display:flex;align-items:center;flex-wrap:wrap;gap:5px;margin:4px 0 14px}.score-label{width:100%;color:var(--muted);font-family:'JetBrains Mono',monospace;font-size:.66rem}.score-pill{display:inline-block;border-radius:4px;padding:2px 6px;font-family:'JetBrains Mono',monospace;font-size:.66rem;font-weight:500;line-height:1.5;white-space:nowrap}.score-good{background:#dcebdc;color:#183d24}.score-warn{background:#fff0c7;color:#6b4200}.score-bad{background:#f9dbd8;color:#7b1d17}[data-theme="dark"] .score-good{background:#1c3829;color:#b9e5c3}[data-theme="dark"] .score-warn{background:#483715;color:#ffe19a}[data-theme="dark"] .score-bad{background:#4a2422;color:#ffb8b0}
+.work-actions{display:flex;flex-wrap:wrap;gap:4px 16px;margin-top:auto;align-items:center}.work-actions .work-link{margin-top:0}.case-open{display:none;min-height:44px;padding:0;border:0;background:transparent;color:var(--accent-ink);font-size:.86rem;font-weight:600;text-align:left;text-decoration:underline;text-underline-offset:5px}.work-ready .case-open{display:inline-flex;align-items:center}.case-open:hover{text-decoration-thickness:2px}.score-note{margin-top:32px;color:var(--muted);font-size:.78rem;line-height:1.6}.score-note+.work-footer{margin-top:18px}
+.work-card .browser-frame.is-tablet{width:min(68%,260px);margin-inline:auto}.work-card .browser-frame.is-tablet>img{aspect-ratio:3/4}.work-card .browser-frame.is-phone{width:min(43%,145px);margin-inline:auto;border:5px solid var(--ink);border-radius:20px;box-shadow:0 12px 30px #17140f24}.work-card .browser-frame.is-phone .browser-bar{display:none}.work-card .browser-frame.is-phone>img{aspect-ratio:390/844;max-height:310px;object-fit:cover;object-position:top}
+.case-dialog{position:fixed;inset:0;width:min(960px,calc(100% - 32px));max-width:none;max-height:calc(100dvh - 32px);margin:auto;padding:0;border:1px solid var(--line);border-radius:12px;background:var(--surface);color:var(--ink);box-shadow:0 30px 90px #0006;overflow-y:auto;overscroll-behavior:contain}.case-dialog::backdrop{background:#100c08b8}.case-shell{padding:clamp(18px,4vw,40px)}.case-top{display:flex;justify-content:space-between;gap:20px;align-items:start}.case-top p{font-size:.83rem;color:var(--muted);margin-top:8px}.case-close{flex:none;font-size:1.5rem;line-height:1}.case-heading{display:flex;align-items:baseline;flex-wrap:wrap;gap:8px 18px;margin:22px 0}.case-heading h2{font-size:clamp(1.8rem,4vw,2.6rem)}.case-preview-tools{display:flex;align-items:center;flex-wrap:wrap;gap:8px 15px;margin-bottom:12px}.case-preview{display:grid;place-items:center;min-height:200px;padding:18px;background:var(--bg);border:1px solid var(--line);border-radius:9px}.case-preview .browser-frame{width:min(100%,720px)}.case-preview .browser-frame>img{width:100%;aspect-ratio:8/5;object-fit:cover;object-position:top}.case-preview .browser-frame.is-tablet{width:min(55%,330px)}.case-preview .browser-frame.is-tablet>img{aspect-ratio:3/4}.case-preview .browser-frame.is-phone{width:min(42%,220px);border:6px solid var(--ink);border-radius:23px}.case-preview .browser-frame.is-phone .browser-bar{display:none}.case-preview .browser-frame.is-phone>img{aspect-ratio:390/844;max-height:440px;object-fit:cover;object-position:top}.case-sections{display:grid;grid-template-columns:1fr 1fr;gap:26px 40px;margin:32px 0}.case-sections h3,.case-measures h3{margin-bottom:9px}.case-sections p,.case-sections li,.case-measures p{font-size:.9rem;line-height:1.65;color:var(--muted)}.case-sections ul{list-style:disc;padding-left:19px}.case-sections li+li{margin-top:6px}.case-table-wrap{overflow-x:auto}.case-measures table{width:100%;border-collapse:collapse;text-align:left}.case-measures caption{text-align:left;color:var(--muted);font-size:.8rem;line-height:1.5;margin-bottom:12px}.case-measures th,.case-measures td{padding:9px 12px;border:1px solid var(--line);font-size:.85rem}.case-measures th{font-weight:600}.case-measures td{text-align:center}.case-measures>p{margin-top:9px;font-size:.78rem}.case-footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-top:30px;padding-top:20px;border-top:1px solid var(--line)}.case-step,.case-links{display:flex;flex-wrap:wrap;gap:9px}.case-footer .btn{font-size:.8rem}.case-step button:disabled{opacity:.5;cursor:not-allowed}body.case-open-body{overflow:hidden}
+@media(max-width:700px){.work-tools{padding:12px}.tool-group,.tool-group:first-child,.tool-group:nth-child(2){flex:1 1 100%}.case-dialog{width:calc(100% - 16px);max-height:calc(100dvh - 16px)}.case-shell{padding:18px 16px}.case-sections{grid-template-columns:1fr;gap:22px}.case-preview{padding:10px}.case-preview .browser-frame.is-phone{width:min(58%,190px)}.case-footer .case-links{width:100%}.case-footer .case-links .btn{flex:1 1 100%}}
+@media(prefers-reduced-motion:no-preference){.case-dialog[open]{animation:case-enter .2s ease-out both}@keyframes case-enter{from{opacity:0;transform:scale(.97)}to{opacity:1;transform:scale(1)}}@supports(view-transition-name:none){::view-transition-old(root),::view-transition-new(root){animation-duration:.3s}}}
 </style>
 <noscript><style>.mobile-cta{display:none!important}.faq-a{grid-template-rows:1fr}.faq-q .plus{display:none}@media(max-width:900px){header{height:auto;position:relative}.nav-wrap{flex-wrap:wrap;padding-block:12px}nav{order:3;width:100%}nav ul{position:static;visibility:visible;transform:none;flex-direction:row;flex-wrap:wrap;padding:0;box-shadow:none;border:0;background:transparent}.menu-toggle,#themeToggle{display:none}}</style></noscript>
 </head>
@@ -120,57 +131,66 @@ footer{padding:32px 0}.footer-inner{display:flex;flex-wrap:wrap;justify-content:
 </section>
 <section class="section" id="work"><div class="wrap">
   <div class="section-head reveal"><span class="kicker">[01] — Concept work</span><h2>Sites we've built for local businesses</h2><p>Eight concept sites for real Northfield businesses that don't have a website yet. Each one is live — click through it like a customer would.</p></div>
-  <div id="workTools"></div>
+  <div id="workTools" class="work-tools" hidden>
+    <div class="tool-group"><span class="tool-label">Filter by trade</span><div class="tool-scroll" role="group" aria-label="Filter concept sites by trade">
+      <button type="button" data-filter="all" aria-pressed="true">All <span class="tool-count">8</span></button><button type="button" data-filter="food" aria-pressed="false">Food &amp; drink <span class="tool-count">2</span></button><button type="button" data-filter="trades" aria-pressed="false">Trades <span class="tool-count">2</span></button><button type="button" data-filter="retail" aria-pressed="false">Retail <span class="tool-count">3</span></button><button type="button" data-filter="beauty" aria-pressed="false">Hair &amp; beauty <span class="tool-count">1</span></button>
+    </div></div>
+    <div class="tool-group"><span class="tool-label">View as</span><div class="tool-scroll" role="group" aria-label="Preview device">
+      <button type="button" data-device="desktop" aria-pressed="true">Desktop</button><button type="button" data-device="tablet" aria-pressed="false">Tablet</button><button type="button" data-device="phone" aria-pressed="false">Phone</button>
+    </div></div>
+    <span class="visually-hidden" id="workStatus" aria-live="polite"></span>
+  </div>
   <div class="work-grid" id="projectGrid">
     <article class="work-card reveal" data-slug="church-hill-autos" data-trade="trades">
       <div class="browser-frame"><div class="browser-bar"><span class="browser-dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="browser-url">desolatemartial553.github.io/church-hill-autos</span></div>
         <img src="img/work/church-hill-autos-desktop-720.webp" srcset="img/work/church-hill-autos-desktop-720.webp 720w, img/work/church-hill-autos-desktop.webp 1440w" sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 33vw" width="1440" height="900" loading="lazy" decoding="async" alt="Homepage of the Church Hill Autos concept site">
       </div>
-      <div class="work-body"><div class="work-meta"><span class="badge">Concept</span><span class="trade">MOT &amp; servicing garage</span></div><h3>Church Hill Autos</h3><p>Station Road garage: MOT booking front and centre, honest pricing tone, one-tap call.</p><a class="work-link" href="https://desolatemartial553.github.io/church-hill-autos/" target="_blank" rel="noopener" aria-label="View concept site — Church Hill Autos (opens in a new tab)">View concept site ↗</a></div>
+      <div class="work-body"><div class="work-meta"><span class="badge">Concept</span><span class="trade">MOT &amp; servicing garage</span></div><h3>Church Hill Autos</h3><p>Station Road garage: MOT booking front and centre, honest pricing tone, one-tap call.</p><div class="work-scores" aria-label="Lighthouse mobile scores"><span class="score-label">Lighthouse mobile:</span><span class="score-pill score-warn">Performance 85</span><span class="score-pill score-good">Accessibility 95</span><span class="score-pill score-good">SEO 100</span></div><div class="work-actions"><button type="button" class="case-open" data-slug="church-hill-autos">Read the case study</button><a class="work-link" href="https://desolatemartial553.github.io/church-hill-autos/" target="_blank" rel="noopener" aria-label="View concept site — Church Hill Autos (opens in a new tab)">View concept site ↗</a></div></div>
     </article>
     <article class="work-card reveal" data-slug="aladdins-longbridge" data-trade="food">
       <div class="browser-frame"><div class="browser-bar"><span class="browser-dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="browser-url">desolatemartial553.github.io/aladdins-longbridge</span></div>
         <img src="img/work/aladdins-longbridge-desktop-720.webp" srcset="img/work/aladdins-longbridge-desktop-720.webp 720w, img/work/aladdins-longbridge-desktop.webp 1440w" sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 33vw" width="1440" height="900" loading="lazy" decoding="async" alt="Homepage of the Aladdins Longbridge concept site">
       </div>
-      <div class="work-body"><div class="work-meta"><span class="badge">Concept</span><span class="trade">Pizza, kebab &amp; chicken takeaway</span></div><h3>Aladdins Longbridge</h3><p>Menu-first takeaway site built around ordering by phone.</p><a class="work-link" href="https://desolatemartial553.github.io/aladdins-longbridge/" target="_blank" rel="noopener" aria-label="View concept site — Aladdins Longbridge (opens in a new tab)">View concept site ↗</a></div>
+      <div class="work-body"><div class="work-meta"><span class="badge">Concept</span><span class="trade">Pizza, kebab &amp; chicken takeaway</span></div><h3>Aladdins Longbridge</h3><p>Menu-first takeaway site built around ordering by phone.</p><div class="work-scores" aria-label="Lighthouse mobile scores"><span class="score-label">Lighthouse mobile:</span><span class="score-pill score-warn">Performance 82</span><span class="score-pill score-good">Accessibility 100</span><span class="score-pill score-good">SEO 100</span></div><div class="work-actions"><button type="button" class="case-open" data-slug="aladdins-longbridge">Read the case study</button><a class="work-link" href="https://desolatemartial553.github.io/aladdins-longbridge/" target="_blank" rel="noopener" aria-label="View concept site — Aladdins Longbridge (opens in a new tab)">View concept site ↗</a></div></div>
     </article>
     <article class="work-card reveal" data-slug="dd-hairsalon" data-trade="beauty">
       <div class="browser-frame"><div class="browser-bar"><span class="browser-dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="browser-url">desolatemartial553.github.io/dd-hairsalon</span></div>
         <img src="img/work/dd-hairsalon-desktop-720.webp" srcset="img/work/dd-hairsalon-desktop-720.webp 720w, img/work/dd-hairsalon-desktop.webp 1440w" sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 33vw" width="1440" height="900" loading="lazy" decoding="async" alt="Homepage of the Denada&#x27;s D&amp;D Hairsalon concept site">
       </div>
-      <div class="work-body"><div class="work-meta"><span class="badge">Concept</span><span class="trade">Hair salon</span></div><h3>Denada&#x27;s D&amp;D Hairsalon</h3><p>Warm, booking-led salon site with gallery and meet-the-owner section.</p><a class="work-link" href="https://desolatemartial553.github.io/dd-hairsalon/" target="_blank" rel="noopener" aria-label="View concept site — Denada&#x27;s D&amp;D Hairsalon (opens in a new tab)">View concept site ↗</a></div>
+      <div class="work-body"><div class="work-meta"><span class="badge">Concept</span><span class="trade">Hair salon</span></div><h3>Denada&#x27;s D&amp;D Hairsalon</h3><p>Warm, booking-led salon site with gallery and meet-the-owner section.</p><div class="work-scores" aria-label="Lighthouse mobile scores"><span class="score-label">Lighthouse mobile:</span><span class="score-pill score-warn">Performance 89</span><span class="score-pill score-good">Accessibility 95</span><span class="score-pill score-good">SEO 100</span></div><div class="work-actions"><button type="button" class="case-open" data-slug="dd-hairsalon">Read the case study</button><a class="work-link" href="https://desolatemartial553.github.io/dd-hairsalon/" target="_blank" rel="noopener" aria-label="View concept site — Denada&#x27;s D&amp;D Hairsalon (opens in a new tab)">View concept site ↗</a></div></div>
     </article>
     <article class="work-card reveal" data-slug="lani-builders" data-trade="trades">
       <div class="browser-frame"><div class="browser-bar"><span class="browser-dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="browser-url">desolatemartial553.github.io/lani-builders</span></div>
         <img src="img/work/lani-builders-desktop-720.webp" srcset="img/work/lani-builders-desktop-720.webp 720w, img/work/lani-builders-desktop.webp 1440w" sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 33vw" width="1440" height="900" loading="lazy" decoding="async" alt="Homepage of the Lani Builders concept site">
       </div>
-      <div class="work-body"><div class="work-meta"><span class="badge">Concept</span><span class="trade">Building &amp; renovation</span></div><h3>Lani Builders</h3><p>Quote-request flow, recent-projects gallery and trust-first copy.</p><a class="work-link" href="https://desolatemartial553.github.io/lani-builders/" target="_blank" rel="noopener" aria-label="View concept site — Lani Builders (opens in a new tab)">View concept site ↗</a></div>
+      <div class="work-body"><div class="work-meta"><span class="badge">Concept</span><span class="trade">Building &amp; renovation</span></div><h3>Lani Builders</h3><p>Quote-request flow, recent-projects gallery and trust-first copy.</p><div class="work-scores" aria-label="Lighthouse mobile scores"><span class="score-label">Lighthouse mobile:</span><span class="score-pill score-warn">Performance 87</span><span class="score-pill score-good">Accessibility 100</span><span class="score-pill score-good">SEO 100</span></div><div class="work-actions"><button type="button" class="case-open" data-slug="lani-builders">Read the case study</button><a class="work-link" href="https://desolatemartial553.github.io/lani-builders/" target="_blank" rel="noopener" aria-label="View concept site — Lani Builders (opens in a new tab)">View concept site ↗</a></div></div>
     </article>
     <article class="work-card reveal" data-slug="backyard-bar-grill" data-trade="food">
       <div class="browser-frame"><div class="browser-bar"><span class="browser-dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="browser-url">desolatemartial553.github.io/backyard-bar-grill</span></div>
         <img src="img/work/backyard-bar-grill-desktop-720.webp" srcset="img/work/backyard-bar-grill-desktop-720.webp 720w, img/work/backyard-bar-grill-desktop.webp 1440w" sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 33vw" width="1440" height="900" loading="lazy" decoding="async" alt="Homepage of the Backyard Bar &amp; Grill concept site">
       </div>
-      <div class="work-body"><div class="work-meta"><span class="badge">Concept</span><span class="trade">Bar &amp; restaurant</span></div><h3>Backyard Bar &amp; Grill</h3><p>Food, live sport and events with a book-a-table call to action.</p><a class="work-link" href="https://desolatemartial553.github.io/backyard-bar-grill/" target="_blank" rel="noopener" aria-label="View concept site — Backyard Bar &amp; Grill (opens in a new tab)">View concept site ↗</a></div>
+      <div class="work-body"><div class="work-meta"><span class="badge">Concept</span><span class="trade">Bar &amp; restaurant</span></div><h3>Backyard Bar &amp; Grill</h3><p>Food, live sport and events with a book-a-table call to action.</p><div class="work-scores" aria-label="Lighthouse mobile scores"><span class="score-label">Lighthouse mobile:</span><span class="score-pill score-warn">Performance 77</span><span class="score-pill score-good">Accessibility 100</span><span class="score-pill score-good">SEO 100</span></div><div class="work-actions"><button type="button" class="case-open" data-slug="backyard-bar-grill">Read the case study</button><a class="work-link" href="https://desolatemartial553.github.io/backyard-bar-grill/" target="_blank" rel="noopener" aria-label="View concept site — Backyard Bar &amp; Grill (opens in a new tab)">View concept site ↗</a></div></div>
     </article>
     <article class="work-card reveal" data-slug="little-italy-menswear" data-trade="retail">
       <div class="browser-frame"><div class="browser-bar"><span class="browser-dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="browser-url">desolatemartial553.github.io/little-italy-menswear</span></div>
         <img src="img/work/little-italy-menswear-desktop-720.webp" srcset="img/work/little-italy-menswear-desktop-720.webp 720w, img/work/little-italy-menswear-desktop.webp 1440w" sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 33vw" width="1440" height="900" loading="lazy" decoding="async" alt="Homepage of the Little Italy Menswear concept site">
       </div>
-      <div class="work-body"><div class="work-meta"><span class="badge">Concept</span><span class="trade">Menswear · 3 shops</span></div><h3>Little Italy Menswear</h3><p>Tailored, editorial look with three store locations and fitting bookings.</p><a class="work-link" href="https://desolatemartial553.github.io/little-italy-menswear/" target="_blank" rel="noopener" aria-label="View concept site — Little Italy Menswear (opens in a new tab)">View concept site ↗</a></div>
+      <div class="work-body"><div class="work-meta"><span class="badge">Concept</span><span class="trade">Menswear · 3 shops</span></div><h3>Little Italy Menswear</h3><p>Tailored, editorial look with three store locations and fitting bookings.</p><div class="work-scores" aria-label="Lighthouse mobile scores"><span class="score-label">Lighthouse mobile:</span><span class="score-pill score-warn">Performance 81</span><span class="score-pill score-good">Accessibility 100</span><span class="score-pill score-good">SEO 100</span></div><div class="work-actions"><button type="button" class="case-open" data-slug="little-italy-menswear">Read the case study</button><a class="work-link" href="https://desolatemartial553.github.io/little-italy-menswear/" target="_blank" rel="noopener" aria-label="View concept site — Little Italy Menswear (opens in a new tab)">View concept site ↗</a></div></div>
     </article>
     <article class="work-card reveal" data-slug="bright-products" data-trade="retail">
       <div class="browser-frame"><div class="browser-bar"><span class="browser-dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="browser-url">desolatemartial553.github.io/bright-products</span></div>
         <img src="img/work/bright-products-desktop-720.webp" srcset="img/work/bright-products-desktop-720.webp 720w, img/work/bright-products-desktop.webp 1440w" sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 33vw" width="1440" height="900" loading="lazy" decoding="async" alt="Homepage of the Bright Products concept site">
       </div>
-      <div class="work-body"><div class="work-meta"><span class="badge">Concept</span><span class="trade">Hardware &amp; home essentials</span></div><h3>Bright Products</h3><p>Northfield Shopping Centre shop: what&#x27;s in stock and how to find it.</p><a class="work-link" href="https://desolatemartial553.github.io/bright-products/" target="_blank" rel="noopener" aria-label="View concept site — Bright Products (opens in a new tab)">View concept site ↗</a></div>
+      <div class="work-body"><div class="work-meta"><span class="badge">Concept</span><span class="trade">Hardware &amp; home essentials</span></div><h3>Bright Products</h3><p>Northfield Shopping Centre shop: what&#x27;s in stock and how to find it.</p><div class="work-scores" aria-label="Lighthouse mobile scores"><span class="score-label">Lighthouse mobile:</span><span class="score-pill score-warn">Performance 72</span><span class="score-pill score-good">Accessibility 95</span><span class="score-pill score-good">SEO 100</span></div><div class="work-actions"><button type="button" class="case-open" data-slug="bright-products">Read the case study</button><a class="work-link" href="https://desolatemartial553.github.io/bright-products/" target="_blank" rel="noopener" aria-label="View concept site — Bright Products (opens in a new tab)">View concept site ↗</a></div></div>
     </article>
     <article class="work-card reveal" data-slug="bang-bargain-clothing-store" data-trade="retail">
       <div class="browser-frame"><div class="browser-bar"><span class="browser-dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="browser-url">desolatemartial553.github.io/Bang-Bargain-Clothing-Store</span></div>
         <img src="img/work/bang-bargain-clothing-store-desktop-720.webp" srcset="img/work/bang-bargain-clothing-store-desktop-720.webp 720w, img/work/bang-bargain-clothing-store-desktop.webp 1440w" sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 33vw" width="1440" height="900" loading="lazy" decoding="async" alt="Homepage of the Bang Bang Bargain Clothes concept site">
       </div>
-      <div class="work-body"><div class="work-meta"><span class="badge">Concept</span><span class="trade">Value clothing</span></div><h3>Bang Bang Bargain Clothes</h3><p>Bold high-street look with an in-store gallery and visit info.</p><a class="work-link" href="https://desolatemartial553.github.io/Bang-Bargain-Clothing-Store/" target="_blank" rel="noopener" aria-label="View concept site — Bang Bang Bargain Clothes (opens in a new tab)">View concept site ↗</a></div>
+      <div class="work-body"><div class="work-meta"><span class="badge">Concept</span><span class="trade">Value clothing</span></div><h3>Bang Bang Bargain Clothes</h3><p>Bold high-street look with an in-store gallery and visit info.</p><div class="work-scores" aria-label="Lighthouse mobile scores"><span class="score-label">Lighthouse mobile:</span><span class="score-pill score-warn">Performance 88</span><span class="score-pill score-good">Accessibility 95</span><span class="score-pill score-good">SEO 100</span></div><div class="work-actions"><button type="button" class="case-open" data-slug="bang-bargain-clothing-store">Read the case study</button><a class="work-link" href="https://desolatemartial553.github.io/Bang-Bargain-Clothing-Store/" target="_blank" rel="noopener" aria-label="View concept site — Bang Bang Bargain Clothes (opens in a new tab)">View concept site ↗</a></div></div>
     </article>
   </div>
+  <p class="score-note">Scores are real Lighthouse 12 results measured on 1 October 2026 (mobile: median of 3 runs). Best Practices is 74–75 on every site because of the embedded Google Map's third-party cookies.</p>
   <div class="work-footer"><p>Your business could be the next concept.</p><a href="#contact" class="btn btn-primary">Get a free mockup <span aria-hidden="true">↗</span></a></div>
 </div></section>
 <section class="section section-alt" id="services"><div class="wrap">
@@ -271,6 +291,277 @@ footer{padding:32px 0}.footer-inner{display:flex;flex-wrap:wrap;justify-content:
 </div></footer>
 <div class="mobile-cta"><a href="#contact" class="btn btn-primary">Get a free mockup</a><a href="mailto:novagridtechno@gmail.com" class="btn btn-outline">Email us</a></div>
 
+<dialog id="caseDialog" class="case-dialog" aria-labelledby="caseTitle">
+  <div class="case-shell">
+    <div class="case-top"><div><span class="badge">Concept site</span><p>Built as a free concept for this business. They are not a client.</p></div><button type="button" id="caseClose" class="icon-btn case-close" aria-label="Close case study">×</button></div>
+    <div class="case-heading"><h2 id="caseTitle"></h2><span class="trade" id="caseTrade"></span></div>
+    <div class="case-preview-tools"><span class="tool-label">View as</span><div class="tool-scroll" role="group" aria-label="Case study preview device"><button type="button" data-case-device="desktop" aria-pressed="true">Desktop</button><button type="button" data-case-device="tablet" aria-pressed="false">Tablet</button><button type="button" data-case-device="phone" aria-pressed="false">Phone</button></div></div>
+    <div class="case-preview" id="casePreview"><div class="browser-frame"><div class="browser-bar"><span class="browser-dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="browser-url" id="caseUrl"></span></div><img id="caseImage" alt="" width="1440" height="900"></div></div>
+    <div class="case-sections"><section><h3>The business</h3><p id="caseBusiness"></p></section><section><h3>The problem</h3><p id="caseProblem"></p></section><section><h3>Design decisions</h3><ul id="caseDecisions"></ul></section><section><h3>What we built</h3><ul id="caseFeatures"></ul></section></div>
+    <section class="case-measures"><h3>Measured performance</h3><div class="case-table-wrap"><table><caption>Lighthouse 12 scores, measured on 1 October 2026. Mobile is the median of 3 runs with default mobile throttling; desktop is one run with the desktop preset.</caption><thead><tr><th scope="col">Metric</th><th scope="col">Mobile</th><th scope="col">Desktop</th></tr></thead><tbody id="caseScores"></tbody></table></div><p>Best Practices scores reflect the embedded Google Map's third-party cookies.</p></section>
+    <div class="case-footer"><div class="case-step"><button type="button" class="btn btn-outline" id="casePrevious">Previous</button><button type="button" class="btn btn-outline" id="caseNext">Next</button></div><div class="case-links"><a class="btn btn-outline" id="caseLive" target="_blank" rel="noopener">Open the live concept ↗</a><button type="button" class="btn btn-primary" id="caseContact">Get a free mockup like this</button></div></div>
+  </div>
+</dialog>
+
+<script type="application/json" id="caseData">
+{
+ "church-hill-autos": {
+  "business": "Independent MOT, servicing and repair garage on Station Road, Northfield.",
+  "problem": "No website. Drivers searching for an MOT nearby only find a bare map listing with no prices, services or easy way to book.",
+  "decisions": [
+   "Bold condensed type (Barlow Condensed) and a red, white and charcoal palette that feels like a working garage, not a car dealership",
+   "\"Book an MOT\" is the first button on the page and repeats in the sticky mobile bar",
+   "Plain-spoken headline: \"Honest garage. Fair prices.\""
+  ],
+  "features": [
+   "Service list: MOT, servicing, diagnostics, tyres, brakes, air con",
+   "Click-to-call phone number in the top bar",
+   "Sticky mobile bar: Book an MOT / Find us",
+   "Live Google Maps embed",
+   "FAQ accordion",
+   "Reviews section ready for real Google reviews"
+  ],
+  "scores": {
+   "mobile": {
+    "performance": 85,
+    "accessibility": 95,
+    "best-practices": 75,
+    "seo": 100
+   },
+   "desktop": {
+    "performance": 97,
+    "accessibility": 93,
+    "best-practices": 74,
+    "seo": 100
+   },
+   "runs": 3
+  }
+ },
+ "aladdins-longbridge": {
+  "business": "Pizza, kebab and fried chicken takeaway in Longbridge.",
+  "problem": "No website. Hungry customers can't see the menu or opening hours without ringing or using a delivery app that takes a cut.",
+  "decisions": [
+   "Menu-first layout: the food is the hero",
+   "Warm, rounded type (Baloo) on a dark background to make food photos pop",
+   "\"Call to Order\" next to \"View the Menu\" so ordering is one tap"
+  ],
+  "features": [
+   "Menu sections for pizza, kebabs and fried chicken",
+   "How-to-order steps (collection and delivery)",
+   "Click-to-call ordering",
+   "Sticky mobile bar: Order Now / Menu",
+   "Opening hours and live Google Maps embed",
+   "FAQ accordion"
+  ],
+  "scores": {
+   "mobile": {
+    "performance": 82,
+    "accessibility": 100,
+    "best-practices": 75,
+    "seo": 100
+   },
+   "desktop": {
+    "performance": 96,
+    "accessibility": 100,
+    "best-practices": 74,
+    "seo": 100
+   },
+   "runs": 3
+  }
+ },
+ "dd-hairsalon": {
+  "business": "Friendly neighbourhood hair salon in Northfield.",
+  "problem": "No website. New customers can't see services, the salon itself, or how to book before they walk in.",
+  "decisions": [
+   "Elegant serif headings (Playfair Display) with soft blush tones to feel welcoming and premium",
+   "Booking-led: \"Book an Appointment\" is the main action everywhere",
+   "A meet-the-owner section, because people choose a hairdresser they trust"
+  ],
+  "features": [
+   "Services: cuts, colour, styling, occasion hair, extensions, men's grooming",
+   "Salon gallery",
+   "Meet-the-owner section",
+   "Sticky mobile bar: Call to Book / Find Us",
+   "Opening hours and live Google Maps embed",
+   "FAQ accordion"
+  ],
+  "scores": {
+   "mobile": {
+    "performance": 89,
+    "accessibility": 95,
+    "best-practices": 75,
+    "seo": 100
+   },
+   "desktop": {
+    "performance": 98,
+    "accessibility": 100,
+    "best-practices": 74,
+    "seo": 100
+   },
+   "runs": 3
+  }
+ },
+ "lani-builders": {
+  "business": "Building and renovation firm covering Northfield and wider Birmingham.",
+  "problem": "No website. Homeowners comparing builders want to see past work and request a quote, and can't.",
+  "decisions": [
+   "Dark navy with a construction-orange accent and a technical typeface (Space Grotesk)",
+   "Quote-led: \"Request a Free Quote\" is the primary action",
+   "Trust-first copy about doing the job properly, first time"
+  ],
+  "features": [
+   "Services: extensions, renovations, roofing, lofts, driveways",
+   "Recent-work gallery",
+   "Free-quote call to action throughout",
+   "Sticky mobile bar: Call for a Quote / Get in Touch",
+   "Live Google Maps embed",
+   "FAQ accordion"
+  ],
+  "scores": {
+   "mobile": {
+    "performance": 87,
+    "accessibility": 100,
+    "best-practices": 75,
+    "seo": 100
+   },
+   "desktop": {
+    "performance": 98,
+    "accessibility": 100,
+    "best-practices": 74,
+    "seo": 100
+   },
+   "runs": 3
+  }
+ },
+ "backyard-bar-grill": {
+  "business": "Bar and grill in Northfield showing live sport.",
+  "problem": "No website. People deciding where to watch the match or eat out can't see the menu, fixtures or book a table.",
+  "decisions": [
+   "Loud, sporty condensed type (Oswald) and dark wood tones that match a sports bar",
+   "Two reasons to visit up front: food and sport",
+   "\"Book a Table\" in the top bar and the sticky mobile bar"
+  ],
+  "features": [
+   "Menu: mains, sides and sharers, drinks",
+   "What's On section for sport and events",
+   "Book-a-table call to action",
+   "Sticky mobile bar: Book a Table / Menu",
+   "Opening hours and live Google Maps embed",
+   "FAQ accordion"
+  ],
+  "scores": {
+   "mobile": {
+    "performance": 77,
+    "accessibility": 100,
+    "best-practices": 75,
+    "seo": 100
+   },
+   "desktop": {
+    "performance": 96,
+    "accessibility": 100,
+    "best-practices": 74,
+    "seo": 100
+   },
+   "runs": 3
+  }
+ },
+ "little-italy-menswear": {
+  "business": "Menswear shop with branches in Northfield, Dudley and Wolverhampton.",
+  "problem": "No website. Shoppers can't browse collections or tell which of the three shops is nearest.",
+  "decisions": [
+   "Black, cream and gold with an editorial serif (Cormorant Garamond) to feel like a tailor",
+   "A locations section that handles three shops cleanly",
+   "\"Book a Fitting\" as the main action"
+  ],
+  "features": [
+   "Collections overview",
+   "Three store locations",
+   "Book-a-fitting call to action",
+   "Click-to-call phone number",
+   "Sticky mobile bar: Book a Fitting / Find a Store",
+   "Live Google Maps embed and FAQ accordion"
+  ],
+  "scores": {
+   "mobile": {
+    "performance": 81,
+    "accessibility": 100,
+    "best-practices": 75,
+    "seo": 100
+   },
+   "desktop": {
+    "performance": 88,
+    "accessibility": 100,
+    "best-practices": 74,
+    "seo": 100
+   },
+   "runs": 3
+  }
+ },
+ "bright-products": {
+  "business": "Hardware and home-essentials shop in Northfield Shopping Centre.",
+  "problem": "No website. People don't know what the shop stocks, so they drive to a big-box store instead.",
+  "decisions": [
+   "Bright, clean blue-and-yellow palette with Montserrat headings: friendly and easy to scan",
+   "\"What we stock\" comes straight after the hero",
+   "Clear directions to the shop inside the shopping centre"
+  ],
+  "features": [
+   "Stock categories: tools, homeware, cleaning, electricals, key cutting, paint and garden",
+   "Click-to-call phone number",
+   "Sticky mobile bar: Call Now / Visit",
+   "Opening hours and live Google Maps embed",
+   "FAQ accordion"
+  ],
+  "scores": {
+   "mobile": {
+    "performance": 72,
+    "accessibility": 95,
+    "best-practices": 75,
+    "seo": 100
+   },
+   "desktop": {
+    "performance": 97,
+    "accessibility": 93,
+    "best-practices": 74,
+    "seo": 100
+   },
+   "runs": 3
+  }
+ },
+ "bang-bargain-clothing-store": {
+  "business": "Value clothing shop in Northfield for men, women and kids.",
+  "problem": "No website. Bargain hunters can't see what's in stock this week or when the shop is open.",
+  "decisions": [
+   "Bold, high-street feel with Poppins headings and a punchy red accent",
+   "Headline sells the value: \"Great clothes. Even greater prices.\"",
+   "An inside-the-shop gallery so people know what to expect"
+  ],
+  "features": [
+   "Departments: menswear, womenswear, kidswear, accessories",
+   "In-store gallery",
+   "Meet-the-owner section",
+   "Sticky mobile bar: Call Now / Visit",
+   "Opening hours and live Google Maps embed",
+   "FAQ accordion"
+  ],
+  "scores": {
+   "mobile": {
+    "performance": 88,
+    "accessibility": 95,
+    "best-practices": 75,
+    "seo": 100
+   },
+   "desktop": {
+    "performance": 97,
+    "accessibility": 93,
+    "best-practices": 74,
+    "seo": 100
+   },
+   "runs": 3
+  }
+ }
+}
+</script>
 <script>
   // Each feature block below is independent and wrapped so a broken
   // selector in one (e.g. after a future markup edit) can't throw and
@@ -294,7 +585,7 @@ footer{padding:32px 0}.footer-inner{display:flex;flex-wrap:wrap;justify-content:
         }
       };
       document.addEventListener('keydown', (event) => {
-        if (event.key === 'Escape' && navList.classList.contains('open')) {
+        if (event.key === 'Escape' && !document.getElementById('caseDialog')?.open && navList.classList.contains('open')) {
           navList.classList.remove('open');
           menuScrim.classList.remove('open');
           syncNavState(false);
@@ -432,6 +723,182 @@ footer{padding:32px 0}.footer-inner{display:flex;flex-wrap:wrap;justify-content:
     });
   } catch (err) {
     console.error('Theme setup failed', err);
+  }
+
+  try {
+    const grid = document.getElementById('projectGrid');
+    const tools = document.getElementById('workTools');
+    const dialog = document.getElementById('caseDialog');
+    const dataBlock = document.getElementById('caseData');
+    if (grid && tools && dialog && dataBlock && typeof dialog.showModal === 'function') {
+      const data = JSON.parse(dataBlock.textContent);
+      const cards = Array.from(grid.querySelectorAll('.work-card[data-slug]'));
+      const filters = Array.from(tools.querySelectorAll('[data-filter]'));
+      const devices = Array.from(tools.querySelectorAll('[data-device]'));
+      const caseDevices = Array.from(dialog.querySelectorAll('[data-case-device]'));
+      const status = document.getElementById('workStatus');
+      const image = document.getElementById('caseImage');
+      const previewFrame = dialog.querySelector('.case-preview .browser-frame');
+      const closeButton = document.getElementById('caseClose');
+      const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
+      const labels = {all: 'all', food: 'food & drink', trades: 'trades', retail: 'retail', beauty: 'hair & beauty'};
+      let filter = 'all';
+      let device = 'desktop';
+      let caseDevice = 'desktop';
+      let currentSlug = null;
+      let opener = null;
+      let returnFocus = true;
+
+      const imagePath = (slug, view) => `img/work/${slug}-${view === 'desktop' ? 'desktop-720' : view}.webp`;
+      const updateImage = (img, frame, slug, title, view, isCase) => {
+        if (!img || !frame) return;
+        frame.classList.toggle('is-tablet', view === 'tablet');
+        frame.classList.toggle('is-phone', view === 'phone');
+        img.src = imagePath(slug, view);
+        if (view === 'desktop') {
+          img.srcset = `${imagePath(slug, view)} 720w, img/work/${slug}-desktop.webp 1440w`;
+          img.sizes = isCase ? '(max-width: 700px) 90vw, 720px' : '(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 33vw';
+        } else {
+          img.removeAttribute('srcset');
+          img.removeAttribute('sizes');
+        }
+        img.width = view === 'desktop' ? 1440 : view === 'tablet' ? 576 : 390;
+        img.height = view === 'desktop' ? 900 : view === 'tablet' ? 768 : 844;
+        img.alt = `${view[0].toUpperCase() + view.slice(1)} view of the ${title} concept site`;
+      };
+      const changeWithTransition = (change) => {
+        if (!motion.matches && typeof document.startViewTransition === 'function') {
+          try { document.startViewTransition(change); return; } catch (err) { console.error('Work transition failed', err); }
+        }
+        change();
+      };
+      const visibleCards = () => cards.filter(card => !card.hidden);
+      const setPressed = (buttons, key, value) => buttons.forEach(button => button.setAttribute('aria-pressed', String(button.dataset[key] === value)));
+      const setFilter = (trade) => {
+        if (!Object.hasOwn(labels, trade)) return;
+        filter = trade;
+        changeWithTransition(() => {
+          cards.forEach(card => { card.hidden = trade !== 'all' && card.dataset.trade !== trade; });
+          setPressed(filters, 'filter', trade);
+          const count = visibleCards().length;
+          if (status) status.textContent = trade === 'all' ? `Showing all ${count} concept sites` : `Showing ${count} ${labels[trade]} concept site${count === 1 ? '' : 's'}`;
+        });
+        if (dialog.open && currentSlug && trade !== 'all' && cards.find(card => card.dataset.slug === currentSlug)?.dataset.trade !== trade) dialog.close();
+      };
+      const setDevice = (view) => {
+        if (!['desktop', 'tablet', 'phone'].includes(view)) return;
+        device = view;
+        changeWithTransition(() => {
+          cards.forEach(card => updateImage(card.querySelector('img'), card.querySelector('.browser-frame'), card.dataset.slug, card.querySelector('h3')?.textContent || '', view, false));
+          setPressed(devices, 'device', view);
+        });
+      };
+      const setCaseDevice = (view) => {
+        if (!currentSlug || !['desktop', 'tablet', 'phone'].includes(view)) return;
+        caseDevice = view;
+        const card = cards.find(item => item.dataset.slug === currentSlug);
+        if (!card) return;
+        updateImage(image, previewFrame, currentSlug, card.querySelector('h3')?.textContent || '', view, true);
+        setPressed(caseDevices, 'caseDevice', view);
+      };
+      const fillList = (id, items) => {
+        const list = document.getElementById(id);
+        if (!list) return;
+        list.replaceChildren(...items.map(item => { const li = document.createElement('li'); li.textContent = item; return li; }));
+      };
+      const renderCase = (slug) => {
+        const card = cards.find(item => item.dataset.slug === slug);
+        const record = Object.hasOwn(data, slug) ? data[slug] : null;
+        if (!card || !record) return false;
+        currentSlug = slug;
+        document.getElementById('caseTitle').textContent = card.querySelector('h3')?.textContent || '';
+        document.getElementById('caseTrade').textContent = card.querySelector('.trade')?.textContent || '';
+        document.getElementById('caseBusiness').textContent = record.business;
+        document.getElementById('caseProblem').textContent = record.problem;
+        fillList('caseDecisions', record.decisions);
+        fillList('caseFeatures', record.features);
+        const siteLink = card.querySelector('.work-link');
+        document.getElementById('caseLive').href = siteLink?.href || '#work';
+        document.getElementById('caseUrl').textContent = siteLink ? siteLink.hostname + siteLink.pathname : '';
+        const scoreRows = [['Performance','performance'],['Accessibility','accessibility'],['Best Practices','best-practices'],['SEO','seo']].map(([label,key]) => {
+          const row = document.createElement('tr');
+          const heading = document.createElement('th');
+          heading.scope = 'row'; heading.textContent = label; row.append(heading);
+          for (const side of ['mobile','desktop']) {
+            const cell = document.createElement('td');
+            const value = record.scores[side][key];
+            const pill = document.createElement('span');
+            pill.className = `score-pill ${value >= 90 ? 'score-good' : value >= 50 ? 'score-warn' : 'score-bad'}`;
+            pill.textContent = String(value);
+            cell.append(pill); row.append(cell);
+          }
+          return row;
+        });
+        document.getElementById('caseScores').replaceChildren(...scoreRows);
+        setCaseDevice(dialog.open ? caseDevice : device);
+        const visible = visibleCards();
+        const index = visible.findIndex(item => item.dataset.slug === slug);
+        document.getElementById('casePrevious').disabled = index <= 0;
+        document.getElementById('caseNext').disabled = index < 0 || index >= visible.length - 1;
+        dialog.scrollTop = 0;
+        return true;
+      };
+      const openCase = (slug) => {
+        if (dialog.open) { renderCase(slug); return; }
+        const trigger = document.activeElement;
+        if (!renderCase(slug)) return;
+        opener = trigger instanceof HTMLElement ? trigger : null;
+        returnFocus = true;
+        dialog.showModal();
+        document.body.classList.add('case-open-body');
+        closeButton?.focus();
+      };
+      cards.forEach(card => {
+        card.style.viewTransitionName = `work-${card.dataset.slug}`;
+        card.querySelector('.case-open')?.addEventListener('click', event => { opener = event.currentTarget; openCase(card.dataset.slug); });
+      });
+      filters.forEach(button => button.addEventListener('click', () => setFilter(button.dataset.filter)));
+      devices.forEach(button => button.addEventListener('click', () => setDevice(button.dataset.device)));
+      caseDevices.forEach(button => button.addEventListener('click', () => setCaseDevice(button.dataset.caseDevice)));
+      closeButton?.addEventListener('click', () => dialog.close());
+      dialog.addEventListener('click', event => { if (event.target === dialog) dialog.close(); });
+      dialog.addEventListener('close', () => {
+        document.body.classList.remove('case-open-body');
+        if (returnFocus && opener?.isConnected) opener.focus();
+        opener = null;
+        currentSlug = null;
+        returnFocus = true;
+      });
+      const step = (offset) => {
+        const visible = visibleCards();
+        const index = visible.findIndex(card => card.dataset.slug === currentSlug);
+        const next = visible[index + offset];
+        if (next) renderCase(next.dataset.slug);
+      };
+      document.getElementById('casePrevious')?.addEventListener('click', () => step(-1));
+      document.getElementById('caseNext')?.addEventListener('click', () => step(1));
+      document.getElementById('caseContact')?.addEventListener('click', () => {
+        const trade = cards.find(card => card.dataset.slug === currentSlug)?.dataset.trade;
+        returnFocus = false;
+        dialog.close();
+        if (trade && typeof window.ngEnquiry?.setTrade === 'function') window.ngEnquiry.setTrade(trade);
+        const target = document.getElementById('contact');
+        const header = document.querySelector('header');
+        if (target) {
+          const top = target.getBoundingClientRect().top + window.pageYOffset - (header?.offsetHeight || 0) - 16;
+          window.scrollTo({top, behavior: motion.matches ? 'auto' : 'smooth'});
+          if (!target.hasAttribute('tabindex')) target.setAttribute('tabindex', '-1');
+          target.focus({preventScroll: true});
+          history.pushState(null, '', '#contact');
+        }
+      });
+      tools.hidden = false;
+      document.documentElement.classList.add('work-ready');
+      if (status) status.textContent = 'Showing all 8 concept sites';
+      window.ngWork = {openCase, setFilter};
+    }
+  } catch (err) {
+    console.error('Work showcase setup failed', err);
   }
 
   try {
