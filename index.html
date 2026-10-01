@@ -73,7 +73,11 @@ footer{padding:32px 0}.footer-inner{display:flex;flex-wrap:wrap;justify-content:
 @media(max-width:900px){:root{--header-h:72px}.menu-toggle{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px}.nav-cta{display:none}nav ul{position:absolute;top:var(--header-h);left:0;right:0;flex-direction:column;gap:2px;padding:18px 24px;background:var(--surface);border-bottom:1px solid var(--line);box-shadow:0 16px 24px #17140f14;visibility:hidden;transform:translateY(-12px)}nav ul.open{visibility:visible;transform:none}nav a{font-size:1rem}.menu-scrim.open{display:block;position:fixed;inset:var(--header-h) 0 0;background:#17140f66;z-index:999}.hero{padding:48px 0 56px}.hero-inner{grid-template-columns:1fr;gap:40px}.hero-copy{max-width:640px}.hero h1{font-size:clamp(2.8rem,6.5vw,4rem)}.hero-copy>p{max-width:580px}.hero-stats{max-width:520px}.hero-visual{width:100%;max-width:660px;margin-inline:auto}.services-grid{gap:30px 24px}.standards-layout,.faq-layout{grid-template-columns:1fr;gap:0}.standards-list{gap:32px}.process-grid{gap:20px}.section{padding:64px 0}.contact-grid{grid-template-columns:1fr;gap:32px}.contact-copy h2{max-width:650px}.contact-copy>p{max-width:540px}}
 @media(max-width:700px){.wrap{width:calc(100% - 40px)}.hero h1{font-size:clamp(2.5rem,9.8vw,3.7rem)}.hero-copy>p{font-size:1rem}.eyebrow{font-size:.64rem;max-width:290px;margin-bottom:20px}.hero-stats{gap:12px;margin-top:30px}.hero-stat strong{font-size:1.65rem;white-space:nowrap}.hero-stat span{font-size:.7rem;text-wrap:balance}.hero .btn-row{flex-direction:column;align-items:stretch}.hero-visual{padding-left:16px}.phone-frame{margin-left:-16px;border-width:4px;border-radius:16px;width:31%}.hero-visual figcaption{font-size:.56rem;margin-top:-36px;margin-left:34%;min-height:50px}.hero-visual .browser-url{font-size:.47rem}.hero-visual .browser-bar{gap:6px}.work-grid{grid-template-columns:1fr;gap:32px}.section-head{margin-bottom:32px}.work-footer{align-items:flex-start;flex-direction:column}.services-grid,.standards-list{grid-template-columns:1fr}.services-grid{gap:24px}.feature{display:grid;grid-template-columns:32px 1fr;gap:10px 8px}.feature-num{grid-row:1/3;margin:2px 0 0}.feature h3{margin:0}.feature p{grid-column:2}.standards-list{gap:26px}.process-grid{grid-template-columns:1fr;gap:28px}.process-grid::before{top:24px;bottom:24px;left:23px;width:1px;height:auto;right:auto}.process-card{padding-left:72px;min-height:84px}.step-num{position:absolute;left:0;top:0;margin:0}.process-card h3{padding-top:3px;margin-bottom:10px}.process-card p{max-width:460px}.contact-form{padding:22px 18px}.contact-form button{width:100%}.footer-links{gap:8px 20px}.footer-brand p{max-width:280px}.mobile-cta{position:fixed;bottom:0;left:0;right:0;z-index:900;display:grid;grid-template-columns:1.6fr 1fr;gap:10px;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:var(--bg);border-top:1px solid var(--line)}.mobile-cta .btn{font-size:.8rem;padding-inline:10px;min-height:46px}body{padding-bottom:calc(78px + env(safe-area-inset-bottom))}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
-.visually-hidden{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.visually-hidden,.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.packages-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}.package-card{min-width:0;display:flex;flex-direction:column;padding:28px;border:1px solid var(--line);border-radius:12px;background:var(--surface)}.package-card.featured{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent)}.package-tag{align-self:flex-start;min-height:25px;margin-bottom:15px;padding:3px 8px;border-radius:4px;background:var(--surface-2);color:var(--accent-ink);font-family:'JetBrains Mono',monospace;font-size:.68rem}.package-card h3{font-size:1.55rem}.package-subtitle{font-weight:600;margin-top:8px}.package-description{color:var(--muted);font-size:.9rem;margin:8px 0 22px}.package-features{margin-bottom:28px}.package-features li{position:relative;padding:8px 0 8px 24px;border-top:1px solid var(--line);font-size:.88rem;line-height:1.5}.package-features li::before{content:'✓';position:absolute;left:0;color:var(--accent-ink)}.package-bottom{margin-top:auto}.package-price{font-family:'Bricolage Grotesque',sans-serif;font-size:1.5rem;font-weight:600;margin-bottom:18px}.package-bottom .btn{width:100%}.packages-note{margin-top:20px;color:var(--muted);font-size:.84rem}
+.enquiry-progress{font-family:'JetBrains Mono',monospace;font-size:.75rem;color:var(--accent-ink)}.progress-bar{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:10px}.progress-bar span{height:5px;border-radius:5px;background:var(--surface-2)}.progress-bar span.active{background:var(--accent)}.step{min-width:0;border:0}.step legend{width:100%;font-family:'Bricolage Grotesque',sans-serif;font-size:1.5rem;font-weight:600;line-height:1.2;margin-bottom:20px}.choice-list{display:grid;gap:10px}.choice-card{display:block;position:relative;cursor:pointer}.choice-card input{position:absolute;opacity:0;width:1px;height:1px;min-height:0;padding:0;border:0}.choice-card span{display:flex;align-items:center;gap:12px;min-height:48px;padding:11px 14px;background:var(--bg);border:1px solid var(--line);border-radius:7px;line-height:1.35}.choice-card span::before{content:'';display:grid;place-items:center;flex:none;width:20px;height:20px;border:1px solid var(--muted);border-radius:5px;color:var(--accent-contrast);font-size:.75rem}.choice-card:has(input:checked) span{border-color:var(--accent);background:color-mix(in srgb,var(--accent) 8%,var(--bg))}.choice-card:has(input:checked) span::before{content:'✓';background:var(--accent);border-color:var(--accent)}.choice-card:has(input:focus-visible) span{outline:3px solid var(--accent);outline-offset:3px}.field-error{color:var(--accent-ink);font-size:.82rem;margin-top:6px;min-height:0}.field-error:empty{display:none}.step-field{margin-top:20px}.contact-form select{width:100%;min-height:48px;padding:10px 14px;background:var(--bg);color:var(--ink);border:1px solid var(--muted);border-radius:6px;font:inherit}.contact-form [aria-invalid="true"]:not(fieldset){border-color:var(--accent)}.step-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}.step-actions .btn{min-width:110px}.enquiry-confirmation{padding:8px 0}.enquiry-confirmation h3{font-size:1.55rem;margin-bottom:14px}.enquiry-confirmation p{color:var(--muted);margin-bottom:18px}.enquiry-confirmation .btn{margin:4px 10px 14px 0}.enquiry-confirmation a{color:var(--accent-ink);text-decoration:underline;text-underline-offset:4px;overflow-wrap:anywhere}
+#enquiryProgress{display:none}.js #enquiryProgress{display:block}
+@media(max-width:899px){.packages-grid{grid-template-columns:1fr}}@media(max-width:700px){.step-actions{display:grid;grid-template-columns:1fr}.step-actions .btn{width:100%}.package-card{padding:22px}}
 .work-tools{display:flex;flex-wrap:wrap;gap:18px 28px;max-width:100%;min-width:0;margin:-4px 0 30px;padding:18px;background:var(--surface);border:1px solid var(--line);border-radius:10px}
 .tool-group{min-width:0;max-width:100%;display:flex;flex-direction:column;gap:7px}.tool-group:first-child{flex:1 1 590px}.tool-group:nth-child(2){flex:0 1 310px}.tool-label{font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted)}
 .tool-scroll{display:flex;gap:6px;max-width:100%;overflow-x:auto;scrollbar-width:thin;padding:2px 2px 5px}.tool-scroll button{flex:none;min-height:44px;padding:8px 12px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--ink);font-size:.8rem;font-weight:600;white-space:nowrap}.tool-scroll button:hover{border-color:var(--muted)}.tool-scroll button[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--bg)}.tool-count{margin-left:3px;opacity:.75}
@@ -92,7 +96,7 @@ footer{padding:32px 0}.footer-inner{display:flex;flex-wrap:wrap;justify-content:
   <div class="wrap nav-wrap">
     <a href="#top" class="logo-chip" aria-label="NovaGrid — home"><span class="logo-mark" aria-hidden="true">N</span><span class="wordmark">NovaGrid</span></a>
     <nav aria-label="Primary"><ul id="navList">
-      <li><a href="#work">Work</a></li><li><a href="#services">Services</a></li><li><a href="#process">Process</a></li><li><a href="#faq">FAQ</a></li><li><a href="#contact">Contact</a></li>
+      <li><a href="#work">Work</a></li><li><a href="#services">Services</a></li><li><a href="#process">Process</a></li><li><a href="#packages">Packages</a></li><li><a href="#faq">FAQ</a></li><li><a href="#contact">Contact</a></li>
     </ul></nav>
     <div class="nav-right">
       <button id="themeToggle" type="button" class="icon-btn" aria-label="Switch to dark theme" aria-pressed="false">
@@ -224,16 +228,25 @@ footer{padding:32px 0}.footer-inner{display:flex;flex-wrap:wrap;justify-content:
     <li class="process-card reveal"><span class="step-num" aria-hidden="true">04</span><h3>Launch</h3><p>Your site goes live at an address you can share, with room to keep improving it.</p></li>
   </ol>
 </div></section>
+<section class="section" id="packages"><div class="wrap">
+  <div class="section-head reveal"><span class="kicker">[05] — Packages</span><h2>Simple packages, no surprises</h2><p>Every project starts with a free concept of your site. If you like it, pick the package that fits.</p></div>
+  <div class="packages-grid">
+    <article class="package-card reveal"><h3>Starter</h3><p class="package-subtitle">One-page site</p><p class="package-description">For a business that just needs to be findable.</p><ul class="package-features"><li>One scrolling page</li><li>Mobile-first design</li><li>Click-to-call and directions buttons</li><li>Google Maps embed and opening hours</li><li>Contact form or email link</li></ul><div class="package-bottom"><p class="package-price">from £— <span class="sr-only">price to be confirmed</span></p><a class="btn btn-primary" href="#contact" data-package="starter">Start with a free mockup</a></div></article>
+    <article class="package-card featured reveal"><span class="package-tag">Recommended for most shops</span><h3>Standard</h3><p class="package-subtitle">Up to 5 pages</p><p class="package-description">Everything in Starter, with room for more detail.</p><ul class="package-features"><li>Everything in Starter</li><li>Separate pages, e.g. services, gallery, about</li><li>FAQ section</li><li>Basic on-page SEO: titles, descriptions, structured data</li></ul><div class="package-bottom"><p class="package-price">from £— <span class="sr-only">price to be confirmed</span></p><a class="btn btn-primary" href="#contact" data-package="standard">Start with a free mockup</a></div></article>
+    <article class="package-card reveal"><h3>Plus</h3><p class="package-subtitle">Site + extras</p><p class="package-description">Everything in Standard, with one extra feature.</p><ul class="package-features"><li>Everything in Standard</li><li>One extra feature, such as an online menu, booking link, quote-request form or multi-location pages</li></ul><div class="package-bottom"><p class="package-price">from £— <span class="sr-only">price to be confirmed</span></p><a class="btn btn-primary" href="#contact" data-package="plus">Start with a free mockup</a></div></article>
+  </div>
+  <p class="packages-note">Prices are being finalised. Ask and you'll get a clear written quote before any work starts.</p>
+</div></section>
 <section class="section" id="faq">
   <div class="wrap faq-layout">
     <div class="section-head reveal">
-      <span class="kicker">[05] — Good to know</span>
+      <span class="kicker">[06] — Good to know</span>
       <h2>A few fair questions</h2>
     </div>
     <div class="faq-list">
       <div class="faq-item reveal">
         <h3><button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-a-1">How much does a website cost? <span class="plus" aria-hidden="true">+</span></button></h3>
-        <div class="faq-a" id="faq-a-1"><div class="faq-a-inner"><div class="faq-a-body">It depends on scope — every project is priced individually rather than off a fixed menu. Message us with what you need and we'll give you a straight answer.</div></div></div>
+        <div class="faq-a" id="faq-a-1"><div class="faq-a-inner"><div class="faq-a-body">Every project starts with a free concept. After that, pick a package — Starter, Standard or Plus — and you'll get a clear written quote before any work starts.</div></div></div>
       </div>
       <div class="faq-item reveal">
         <h3><button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-a-2">How long does a project take? <span class="plus" aria-hidden="true">+</span></button></h3>
@@ -257,29 +270,46 @@ footer{padding:32px 0}.footer-inner{display:flex;flex-wrap:wrap;justify-content:
 <section class="section section-alt" id="contact">
   <div class="wrap contact-grid">
     <div class="contact-copy reveal">
-      <span class="kicker">[06] — Get in touch</span>
+      <span class="kicker">[07] — Get in touch</span>
       <h2>Want to see your business online? Ask for a free mockup.</h2>
       <p>Tell us what you do and what you'd like your website to help with. We'll build a free concept so you can see it for yourself.</p>
       <div class="contact-methods">
         <a href="mailto:novagridtechno@gmail.com"><span aria-hidden="true">&#9993;</span> novagridtechno@gmail.com</a>
       </div>
     </div>
-    <form class="contact-form reveal" id="contactForm">
-      <div>
-        <label for="contact-name" class="field-label">Your name <span class="required-mark" aria-hidden="true">*</span></label>
-        <input type="text" id="contact-name" name="name" autocomplete="name" placeholder="Jane Doe" required>
-      </div>
-      <div>
-        <label for="contact-business" class="field-label">Business name</label>
-        <input type="text" id="contact-business" name="business" autocomplete="organization" placeholder="Jane's Bakery (optional)">
-      </div>
-      <div>
-        <label for="contact-message" class="field-label">Tell us what you need <span class="required-mark" aria-hidden="true">*</span></label>
-        <textarea id="contact-message" name="message" rows="4" maxlength="1200" placeholder="A short description of your business and what you're looking for" required></textarea>
-      </div>
-      <p class="form-note">This opens your email app with your message ready to send.</p>
-      <button type="submit" class="btn btn-primary">Get a free mockup <span aria-hidden="true">↗</span></button>
-      <p class="form-status" id="formStatus" role="status"></p>
+    <form class="contact-form reveal" id="enquiryForm" novalidate action="mailto:novagridtechno@gmail.com" method="post" enctype="text/plain">
+      <div id="enquiryProgress"><p class="enquiry-progress" id="progressText" aria-live="polite">Step 1 of 3</p><div class="progress-bar" aria-hidden="true"><span class="active"></span><span></span><span></span></div></div>
+      <fieldset class="step" data-step="1" aria-describedby="tradeError"><legend tabindex="-1">What kind of business do you run?</legend>
+        <div class="choice-list">
+          <label class="choice-card" for="tradeFood"><input id="tradeFood" type="radio" name="trade" value="food" required><span>Food &amp; drink</span></label>
+          <label class="choice-card" for="tradeTrades"><input id="tradeTrades" type="radio" name="trade" value="trades"><span>Trades &amp; services</span></label>
+          <label class="choice-card" for="tradeRetail"><input id="tradeRetail" type="radio" name="trade" value="retail"><span>Shop or retail</span></label>
+          <label class="choice-card" for="tradeBeauty"><input id="tradeBeauty" type="radio" name="trade" value="beauty"><span>Hair &amp; beauty</span></label>
+          <label class="choice-card" for="tradeOther"><input id="tradeOther" type="radio" name="trade" value="other"><span>Something else</span></label>
+        </div><p class="field-error" id="tradeError"></p>
+        <div class="step-actions"><button type="button" class="btn btn-primary" data-next>Next</button></div>
+      </fieldset>
+      <fieldset class="step" data-step="2" aria-describedby="needsError"><legend tabindex="-1">What do you need?</legend>
+        <div class="choice-list">
+          <label class="choice-card" for="needNew"><input id="needNew" type="checkbox" name="needs" value="new"><span>A brand-new website</span></label>
+          <label class="choice-card" for="needRedo"><input id="needRedo" type="checkbox" name="needs" value="redo"><span>A redo of my current website</span></label>
+          <label class="choice-card" for="needExtra"><input id="needExtra" type="checkbox" name="needs" value="extra"><span>Online menu, booking or quotes</span></label>
+          <label class="choice-card" for="needGoogle"><input id="needGoogle" type="checkbox" name="needs" value="google"><span>Showing up properly on Google</span></label>
+          <label class="choice-card" for="needUnsure"><input id="needUnsure" type="checkbox" name="needs" value="unsure"><span>Not sure yet — help me decide</span></label>
+        </div><p class="field-error" id="needsError"></p>
+        <div class="step-field"><label class="field-label" for="enquiryPackage">Package</label><select id="enquiryPackage" name="package"><option value="unsure">Not sure</option><option value="starter">Starter</option><option value="standard">Standard</option><option value="plus">Plus</option></select></div>
+        <div class="step-field"><label class="field-label" for="enquiryDetails">Anything else we should know?</label><textarea id="enquiryDetails" name="details" rows="4" maxlength="1200"></textarea></div>
+        <div class="step-actions"><button type="button" class="btn btn-outline" data-back>Back</button><button type="button" class="btn btn-primary" data-next>Next</button></div>
+      </fieldset>
+      <fieldset class="step" data-step="3"><legend tabindex="-1">Where should we send your mockup?</legend>
+        <div><label class="field-label" for="enquiryName">Your name <span class="required-mark" aria-hidden="true">*</span></label><input id="enquiryName" name="name" autocomplete="name" required><p class="field-error" id="nameError"></p></div>
+        <div class="step-field"><label class="field-label" for="enquiryBusiness">Business name <span class="required-mark" aria-hidden="true">*</span></label><input id="enquiryBusiness" name="business" autocomplete="organization" required><p class="field-error" id="businessError"></p></div>
+        <div class="step-field"><label class="field-label" for="enquiryArea">Area or town</label><input id="enquiryArea" name="area" placeholder="e.g. Northfield"><p class="field-error" id="areaError"></p></div>
+        <div class="step-field"><label class="field-label" for="enquiryPhone">Phone (optional)</label><input id="enquiryPhone" name="phone" type="tel" autocomplete="tel"><p class="field-error" id="phoneError"></p></div>
+        <p class="form-note step-field">This opens your email app with your request ready to send.</p>
+        <div class="step-actions"><button type="button" class="btn btn-outline" data-back>Back</button><button type="submit" class="btn btn-primary">Open email to send</button></div>
+      </fieldset>
+      <div id="enquiryConfirmation" class="enquiry-confirmation" role="status" hidden><h3 tabindex="-1">Nearly done — check your email app</h3><p>We've opened your email app with your request filled in. Press send and your request is on its way.</p><p>Email app didn't open?</p><button type="button" class="btn btn-outline" id="copyRequest">Copy request</button><a href="mailto:novagridtechno@gmail.com">novagridtechno@gmail.com</a><div><button type="button" class="btn btn-outline" id="startAgain">Start again</button></div></div>
     </form>
   </div>
 </section>
@@ -293,7 +323,7 @@ footer{padding:32px 0}.footer-inner{display:flex;flex-wrap:wrap;justify-content:
 
 <dialog id="caseDialog" class="case-dialog" aria-labelledby="caseTitle">
   <div class="case-shell">
-    <div class="case-top"><div><span class="badge">Concept site</span><p>Built as a free concept for this business. They are not a client.</p></div><button type="button" id="caseClose" class="icon-btn case-close" aria-label="Close case study">×</button></div>
+    <div class="case-top"><div><span class="badge">Concept site</span><p>Built as a free concept for this business. The business did not commission it.</p></div><button type="button" id="caseClose" class="icon-btn case-close" aria-label="Close case study">×</button></div>
     <div class="case-heading"><h2 id="caseTitle"></h2><span class="trade" id="caseTrade"></span></div>
     <div class="case-preview-tools"><span class="tool-label">View as</span><div class="tool-scroll" role="group" aria-label="Case study preview device"><button type="button" data-case-device="desktop" aria-pressed="true">Desktop</button><button type="button" data-case-device="tablet" aria-pressed="false">Tablet</button><button type="button" data-case-device="phone" aria-pressed="false">Phone</button></div></div>
     <div class="case-preview" id="casePreview"><div class="browser-frame"><div class="browser-bar"><span class="browser-dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="browser-url" id="caseUrl"></span></div><img id="caseImage" alt="" width="1440" height="900"></div></div>
@@ -563,10 +593,7 @@ footer{padding:32px 0}.footer-inner{display:flex;flex-wrap:wrap;justify-content:
 }
 </script>
 <script>
-  // Each feature block below is independent and wrapped so a broken
-  // selector in one (e.g. after a future markup edit) can't throw and
-  // silently prevent the contact form's submit listener — the page's
-  // actual conversion point — from ever being registered.
+  // Each feature block below is independent so one failed feature cannot stop the others.
   try {
     const toggle = document.getElementById('menuToggle');
     const navList = document.getElementById('navList');
@@ -668,35 +695,151 @@ footer{padding:32px 0}.footer-inner{display:flex;flex-wrap:wrap;justify-content:
   }
 
   try {
-    const enquiryForm = document.getElementById('contactForm');
-    const formStatus = document.getElementById('formStatus');
-    if (enquiryForm) {
-      enquiryForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const name = enquiryForm.name.value.trim();
-        const business = enquiryForm.business.value.trim();
-        const message = enquiryForm.message.value.trim();
-
-        if (!name || !message) {
-          if (formStatus) {
-            formStatus.textContent = 'Please fill in your name and a short message.';
-            formStatus.className = 'form-status error';
+    const form = document.getElementById('enquiryForm');
+    if (form) {
+      const steps = Array.from(form.querySelectorAll('.step'));
+      const progress = document.getElementById('enquiryProgress');
+      const progressText = document.getElementById('progressText');
+      const segments = Array.from(form.querySelectorAll('.progress-bar span'));
+      const confirmation = document.getElementById('enquiryConfirmation');
+      const packageSelect = document.getElementById('enquiryPackage');
+      const tradeInputs = Array.from(form.querySelectorAll('[name="trade"]'));
+      const needsInputs = Array.from(form.querySelectorAll('[name="needs"]'));
+      const fields = [document.getElementById('enquiryName'), document.getElementById('enquiryBusiness')];
+      let currentStep = 1;
+      let requestText = '';
+      const fieldError = (control, errorId, message) => {
+        document.getElementById(errorId).textContent = message;
+        control.setAttribute('aria-invalid', 'true');
+        control.setAttribute('aria-describedby', errorId);
+      };
+      const clearFieldError = (control, errorId) => {
+        document.getElementById(errorId).textContent = '';
+        control.removeAttribute('aria-invalid');
+        control.removeAttribute('aria-describedby');
+      };
+      const groupError = (step, errorId, message) => {
+        document.getElementById(errorId).textContent = message;
+        steps[step - 1].setAttribute('aria-invalid', 'true');
+      };
+      const clearGroupError = (step, errorId) => {
+        document.getElementById(errorId).textContent = '';
+        steps[step - 1].removeAttribute('aria-invalid');
+      };
+      const showStep = (number, focus = true) => {
+        currentStep = number;
+        steps.forEach((step, index) => { step.hidden = index + 1 !== number; });
+        progressText.textContent = `Step ${number} of 3`;
+        segments.forEach((segment, index) => segment.classList.toggle('active', index < number));
+        if (focus) steps[number - 1].querySelector('legend').focus({preventScroll: true});
+      };
+      const validateStep = (number) => {
+        if (number === 1) {
+          if (!tradeInputs.some(input => input.checked)) {
+            groupError(1, 'tradeError', 'Choose the type of business you run.');
+            tradeInputs[0].focus();
+            return false;
           }
-          return;
+          clearGroupError(1, 'tradeError');
         }
-
-        const subject = `New project enquiry${business ? ' — ' + business : ''}`;
-        const body = `Name: ${name}\nBusiness: ${business || 'N/A'}\n\n${message}`;
+        if (number === 2) {
+          if (!needsInputs.some(input => input.checked)) {
+            groupError(2, 'needsError', 'Choose at least one thing you need.');
+            needsInputs[0].focus();
+            return false;
+          }
+          clearGroupError(2, 'needsError');
+        }
+        if (number === 3) {
+          let firstInvalid = null;
+          for (const control of fields) {
+            const errorId = control.id === 'enquiryName' ? 'nameError' : 'businessError';
+            if (!control.value.trim()) {
+              fieldError(control, errorId, control.id === 'enquiryName' ? 'Enter your name.' : 'Enter your business name.');
+              firstInvalid = firstInvalid || control;
+            } else {
+              clearFieldError(control, errorId);
+            }
+          }
+          if (firstInvalid) { firstInvalid.focus(); return false; }
+        }
+        return true;
+      };
+      tradeInputs.forEach(input => input.addEventListener('change', () => clearGroupError(1, 'tradeError')));
+      needsInputs.forEach(input => input.addEventListener('change', () => {
+        if (needsInputs.some(item => item.checked)) clearGroupError(2, 'needsError');
+      }));
+      fields.forEach(control => control.addEventListener('input', () => {
+        if (control.value.trim()) clearFieldError(control, control.id === 'enquiryName' ? 'nameError' : 'businessError');
+      }));
+      form.querySelectorAll('[data-next]').forEach(button => button.addEventListener('click', () => {
+        if (validateStep(currentStep)) showStep(currentStep + 1);
+      }));
+      form.querySelectorAll('[data-back]').forEach(button => button.addEventListener('click', () => showStep(currentStep - 1)));
+      window.ngEnquiry = {
+        setTrade(value) {
+          const input = tradeInputs.find(item => item.value === value);
+          if (input) { input.checked = true; clearGroupError(1, 'tradeError'); }
+        },
+        setPackage(value) {
+          if (Array.from(packageSelect.options).some(option => option.value === value)) packageSelect.value = value;
+        }
+      };
+      document.querySelectorAll('a[data-package]').forEach(link => link.addEventListener('click', () => window.ngEnquiry.setPackage(link.dataset.package), {capture: true}));
+      form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        for (let number = 1; number <= 3; number++) {
+          if (number !== currentStep) showStep(number, false);
+          if (!validateStep(number)) return;
+        }
+        const selectedTrade = tradeInputs.find(input => input.checked);
+        const selectedNeeds = needsInputs.filter(input => input.checked);
+        const labelFor = (input) => input.closest('label').querySelector('span').textContent.trim();
+        const value = (name) => form.elements.namedItem(name).value.trim();
+        const business = value('business');
+        const subject = `Free mockup request — ${business}`;
+        const body = [
+          `Name: ${value('name')}`,
+          `Business: ${business}`,
+          `Type of business: ${labelFor(selectedTrade)}`,
+          `Area: ${value('area') || 'Not given'}`,
+          `Phone: ${value('phone') || 'Not given'}`,
+          `What they need: ${selectedNeeds.map(labelFor).join(', ')}`,
+          `Package: ${packageSelect.selectedOptions[0].textContent.trim()}`,
+          `Details:\n${value('details')}`
+        ].join('\n');
+        requestText = `Subject: ${subject}\n\n${body}`;
         window.location.href = `mailto:novagridtechno@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-
-        if (formStatus) {
-          formStatus.textContent = "Opening your email app to send this. If nothing happens, email us directly at novagridtechno@gmail.com.";
-          formStatus.className = 'form-status';
+        steps.forEach(step => { step.hidden = true; });
+        progress.hidden = true;
+        confirmation.hidden = false;
+        confirmation.querySelector('h3').focus({preventScroll: true});
+      });
+      document.getElementById('copyRequest').addEventListener('click', async (event) => {
+        const copyButton = event.currentTarget;
+        try {
+          if (!navigator.clipboard?.writeText) throw new Error('Clipboard unavailable');
+          await navigator.clipboard.writeText(requestText);
+          copyButton.textContent = 'Copied';
+        } catch (err) {
+          copyButton.textContent = 'Copy not available: email us directly';
         }
       });
+      document.getElementById('startAgain').addEventListener('click', () => {
+        form.reset();
+        fields.forEach(control => clearFieldError(control, control.id === 'enquiryName' ? 'nameError' : 'businessError'));
+        clearGroupError(1, 'tradeError');
+        clearGroupError(2, 'needsError');
+        document.getElementById('copyRequest').textContent = 'Copy request';
+        requestText = '';
+        confirmation.hidden = true;
+        progress.hidden = false;
+        showStep(1);
+      });
+      showStep(1, false);
     }
   } catch (err) {
-    console.error('Contact form setup failed', err);
+    console.error('Enquiry form setup failed', err);
   }
 
   try {
@@ -936,7 +1079,7 @@ footer{padding:32px 0}.footer-inner{display:flex;flex-wrap:wrap;justify-content:
       "name": "How much does a website cost?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "It depends on scope — every project is priced individually rather than off a fixed menu. Message us with what you need and we'll give you a straight answer."
+        "text": "Every project starts with a free concept. After that, pick a package — Starter, Standard or Plus — and you'll get a clear written quote before any work starts."
       }
     },
     {
