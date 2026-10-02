@@ -1209,7 +1209,12 @@ footer{padding:42px 0 24px;background:var(--surface);border-top:1px solid var(--
       };
       const changeWithTransition = (change) => {
         if (!motion.matches && typeof document.startViewTransition === 'function') {
-          try { document.startViewTransition(change); return; } catch (err) { console.error('Work transition failed', err); }
+          try {
+            // A newer transition skips this one; its promises then reject with AbortError.
+            const transition = document.startViewTransition(change);
+            [transition.ready, transition.finished, transition.updateCallbackDone].forEach(p => p?.catch(() => {}));
+            return;
+          } catch (err) { console.error('Work transition failed', err); }
         }
         change();
       };
