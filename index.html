@@ -126,6 +126,17 @@ footer{padding:42px 0 24px;background:var(--surface);border-top:1px solid var(--
 @media(min-width:901px){.section>.wrap{position:relative}.section>.wrap::before,.section>.wrap::after{content:'';position:absolute;top:-45px;width:11px;height:11px;pointer-events:none;background:linear-gradient(var(--field),var(--field)) center/11px 1px no-repeat,linear-gradient(var(--field),var(--field)) center/1px 11px no-repeat}.section>.wrap::before{left:0}.section>.wrap::after{right:0}}
 @media(max-width:700px){.readout{display:none}.status-line{padding:6px 10px;gap:8px}.tool-scroll{padding-right:32px;mask-image:linear-gradient(90deg,#000 calc(100% - 32px),transparent);-webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 32px),transparent)}}
 @media(prefers-reduced-motion:no-preference){.picker-caret{animation:caret-blink 1s steps(1,end) infinite}@keyframes caret-blink{50%{opacity:0}}.status-dot{animation:status-pulse 2.4s ease-out infinite}@keyframes status-pulse{0%,100%{box-shadow:0 0 0 0 color-mix(in srgb,var(--spark) 30%,transparent)}70%{box-shadow:0 0 0 6px transparent}}}
+/* Jump menu, live readout, and work-card pointer detail */
+.jump-btn{display:inline-flex;align-items:center;justify-content:space-between;gap:12px;min-height:44px;padding:0 11px;border:1px solid var(--line);border-radius:999px;background:transparent;color:var(--ink);font-size:.82rem;white-space:nowrap}.jump-btn:hover{background:var(--surface-2)}kbd{font-family:'JetBrains Mono',monospace;font-size:.7rem;font-weight:500;line-height:1.4;border:1px solid var(--line);border-radius:4px;padding:1px 5px;background:var(--surface-2);color:var(--muted)}
+.jump-dialog{position:fixed;inset:0;width:min(560px,calc(100% - 32px));max-width:none;max-height:calc(100dvh - 24vh);margin:12vh auto 0;padding:0;border:1px solid var(--line);border-radius:12px;background:var(--surface);color:var(--ink);box-shadow:0 20px 60px #0005;overflow:hidden}.jump-dialog::backdrop{background:color-mix(in srgb,#000 55%,transparent)}.jump-search-wrap{padding:16px;border-bottom:1px solid var(--line)}.jump-search{display:block;width:100%;min-height:48px;padding:10px 14px;border:1px solid var(--field);border-radius:7px;background:var(--bg);color:var(--ink);font-size:1rem}.jump-search::placeholder{color:var(--muted);opacity:1}.jump-list{max-height:min(50vh,480px);overflow-y:auto;padding:7px}.jump-list [role="option"]{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:44px;padding:9px 14px;border-left:2px solid transparent;border-radius:5px;cursor:pointer}.jump-list [role="option"][aria-selected="true"],.jump-list [role="option"]:hover{background:var(--surface-2)}.jump-list [role="option"][aria-selected="true"]{border-left-color:var(--accent)}.jump-hint,.jump-footer{font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted)}.jump-hint{flex:none}.jump-empty{padding:20px 14px;color:var(--muted)}.jump-footer{padding:12px 16px;border-top:1px solid var(--line)}
+.work-card .browser-frame{position:relative}.page-readout{display:inline-flex;align-items:center;gap:8px}.page-readout::before{content:'';width:6px;height:6px;flex:none;border-radius:50%;background:var(--accent)}
+@media(hover:hover) and (pointer:fine){.work-card .browser-frame::after{content:'';position:absolute;inset:0;padding:1px;border-radius:inherit;pointer-events:none;opacity:0;background:radial-gradient(240px circle at var(--mx,50%) var(--my,50%),color-mix(in srgb,var(--accent) 60%,transparent),transparent 60%);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude}.work-card:hover .browser-frame::after{opacity:1}}
+@media(hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference){.work-card .browser-frame::after{transition:opacity .2s}}
+@media(prefers-reduced-motion:reduce){.work-card .browser-frame::after{opacity:0!important}}
+@media(prefers-reduced-motion:no-preference){.jump-dialog[open]{animation:jump-enter .15s ease-out both}@keyframes jump-enter{from{opacity:0;transform:scale(.98)}to{opacity:1;transform:scale(1)}}}
+@media(max-width:1100px) and (min-width:901px){.nav-wrap{gap:8px}nav ul{gap:9px}nav a{font-size:.8rem}.nav-right{gap:6px}.nav-cta{padding-inline:10px}.jump-btn{gap:6px;padding-inline:8px}}
+@media(max-width:900px){.jump-btn{display:none}}
+@media(max-width:700px){.footer-bottom{flex-wrap:wrap}}
 </style>
 <noscript><style>.mobile-cta{display:none!important}.faq-a{grid-template-rows:1fr}.faq-q .plus{display:none}@media(max-width:900px){header{height:auto;position:relative}.nav-wrap{flex-wrap:wrap;padding-block:12px}nav{order:3;width:100%}nav ul{position:static;visibility:visible;transform:none;flex-direction:row;flex-wrap:wrap;padding:0;box-shadow:none;border:0;background:transparent}.menu-toggle,#themeToggle{display:none}}</style></noscript>
 </head>
@@ -138,6 +149,7 @@ footer{padding:42px 0 24px;background:var(--surface);border-top:1px solid var(--
       <li><a href="#work">Work</a></li><li><a href="#services">Services</a></li><li><a href="#process">Process</a></li><li><a href="#packages">Packages</a></li><li><a href="#faq">FAQ</a></li><li><a href="#contact">Contact</a></li>
     </ul></nav>
     <div class="nav-right">
+      <button type="button" class="jump-btn" id="jumpOpen" aria-haspopup="dialog" aria-controls="jumpDialog">Jump to <span aria-hidden="true"><kbd>Ctrl K</kbd></span></button>
       <button id="themeToggle" type="button" class="icon-btn" aria-label="Switch to light theme" aria-pressed="true">
         <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M20.5 14A8.6 8.6 0 0 1 10 3.5 8.7 8.7 0 1 0 20.5 14Z"/></svg>
         <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg>
@@ -174,7 +186,8 @@ footer{padding:42px 0 24px;background:var(--surface);border-top:1px solid var(--
     </figure>
   </div>
 </section>
-<section class="picker-band" id="picker" aria-labelledby="pickerTitle"><div class="wrap">
+<section class="picker-band" id="picker" aria-labelledby="pickerHeading"><div class="wrap">
+  <h2 id="pickerHeading" class="visually-hidden">Find your trade</h2>
   <div class="picker-prompt"><span class="picker-chevron" aria-hidden="true">›</span><label for="tradePicker" id="pickerTitle">I run a</label><span class="picker-select-wrap"><select class="picker-select" id="tradePicker"><option value="">choose your business</option><option value="takeaway">takeaway or restaurant</option><option value="pub">pub, bar or café</option><option value="garage">garage or mechanic</option><option value="building">building or trade business</option><option value="beauty">hair or beauty salon</option><option value="fashion">clothes or fashion shop</option><option value="hardware">hardware or general shop</option><option value="other">something else</option></select></span><span class="picker-caret" aria-hidden="true">▌</span></div>
   <p class="picker-fallback">See <a class="text-link" href="#work">all our concept sites below</a>.</p>
   <div class="picker-result" id="pickerResult" aria-live="polite" hidden>
@@ -373,6 +386,13 @@ footer{padding:42px 0 24px;background:var(--surface);border-top:1px solid var(--
   <div class="footer-bottom"><p class="copyright">© 2026 NovaGrid Techno</p><p class="page-readout" id="pageReadout" hidden></p></div>
 </div></footer>
 <div class="mobile-cta"><a href="#contact" class="btn btn-primary">Get a free mockup</a><a href="mailto:novagridtechno@gmail.com" class="btn btn-outline">Email us</a></div>
+
+<dialog id="jumpDialog" class="jump-dialog" aria-labelledby="jumpTitle">
+  <h2 id="jumpTitle" class="visually-hidden">Jump to a section</h2>
+  <div class="jump-search-wrap"><label class="visually-hidden" for="jumpSearch">Search sections</label><input id="jumpSearch" class="jump-search" type="search" placeholder="Type to filter…" role="combobox" aria-expanded="true" aria-controls="jumpList" aria-autocomplete="list"></div>
+  <ul id="jumpList" class="jump-list" role="listbox" aria-label="Sections"></ul>
+  <p class="jump-footer">↑↓ to move · Enter to go · Esc to close</p>
+</dialog>
 
 <dialog id="caseDialog" class="case-dialog" aria-labelledby="caseTitle">
   <div class="case-shell">
@@ -724,7 +744,7 @@ footer{padding:42px 0 24px;background:var(--surface);border-top:1px solid var(--
         }
       };
       document.addEventListener('keydown', (event) => {
-        if (event.key === 'Escape' && !document.getElementById('caseDialog')?.open && navList.classList.contains('open')) {
+        if (event.key === 'Escape' && !document.getElementById('caseDialog')?.open && !document.getElementById('jumpDialog')?.open && navList.classList.contains('open')) {
           navList.classList.remove('open');
           menuScrim.classList.remove('open');
           syncNavState(false);
@@ -766,17 +786,21 @@ footer{padding:42px 0 24px;background:var(--surface);border-top:1px solid var(--
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
     const header = document.querySelector('header');
     if (header) {
+      const scrollToPageSection = (target, focusHeading = false) => {
+        const top = target.getBoundingClientRect().top + window.pageYOffset - header.offsetHeight - 16;
+        window.scrollTo({top, behavior: prefersReducedMotion.matches ? 'auto' : 'smooth'});
+        const focusTarget = focusHeading ? target.querySelector('h2') || target : target;
+        if (!focusTarget.hasAttribute('tabindex')) focusTarget.setAttribute('tabindex', '-1');
+        focusTarget.focus({preventScroll: true});
+      };
+      window.ngScrollToSection = scrollToPageSection;
       document.querySelectorAll('a[href^="#"]').forEach(link => {
         link.addEventListener('click', function(e){
           const id = this.getAttribute('href').slice(1);
           const target = document.getElementById(id);
           if(!target) return;
           e.preventDefault();
-          const headerH = header.offsetHeight;
-          const top = target.getBoundingClientRect().top + window.pageYOffset - headerH - 16;
-          window.scrollTo({top, behavior: prefersReducedMotion.matches ? 'auto' : 'smooth'});
-          if (!target.hasAttribute('tabindex')) target.setAttribute('tabindex', '-1');
-          target.focus({preventScroll: true});
+          scrollToPageSection(target);
         });
       });
     }
@@ -972,6 +996,175 @@ footer{padding:42px 0 24px;background:var(--surface);border-top:1px solid var(--
   } catch (err) {
     console.error('Theme setup failed', err);
   }
+
+  try {
+    const jumpOpen = document.getElementById('jumpOpen');
+    const jumpDialog = document.getElementById('jumpDialog');
+    const jumpSearch = document.getElementById('jumpSearch');
+    const jumpList = document.getElementById('jumpList');
+    const themeToggle = document.getElementById('themeToggle');
+    const isApple = /mac|iphone|ipad/i.test(navigator.userAgentData?.platform || navigator.platform || '');
+    if (jumpOpen && jumpDialog && jumpSearch && jumpList && themeToggle && typeof jumpDialog.showModal === 'function') {
+      jumpOpen.querySelector('kbd').textContent = isApple ? '⌘K' : 'Ctrl K';
+      jumpOpen.setAttribute('aria-label', `Jump to a section (shortcut ${isApple ? 'Command' : 'Control'} K)`);
+      const sections = [
+        ['Concept work', 'work'], ['Find your trade', 'picker'], ['Before & after', 'compare'],
+        ['What every site gets', 'services'], ['How it works', 'process'], ['Packages', 'packages'],
+        ['Questions', 'faq'], ['Get a free mockup', 'contact']
+      ];
+      let visible = [];
+      let activeIndex = -1;
+      let opener = null;
+      let chosen = false;
+      const setActive = (index) => {
+        activeIndex = index;
+        jumpList.querySelectorAll('[role="option"]').forEach((option, i) => {
+          option.setAttribute('aria-selected', String(i === index));
+        });
+        const active = jumpList.querySelectorAll('[role="option"]')[index];
+        if (active) {
+          jumpSearch.setAttribute('aria-activedescendant', active.id);
+          active.scrollIntoView({block: 'nearest'});
+        } else {
+          jumpSearch.removeAttribute('aria-activedescendant');
+        }
+      };
+      const activate = (index) => {
+        const item = visible[index];
+        if (!item) return;
+        chosen = true;
+        jumpDialog.close();
+        if (item.action) {
+          themeToggle.click();
+          if (opener?.isConnected) opener.focus();
+        } else {
+          const target = document.getElementById(item.id);
+          if (target) requestAnimationFrame(() => window.ngScrollToSection?.(target, true));
+        }
+      };
+      const render = () => {
+        const themeLabel = themeToggle.getAttribute('aria-label') || 'Switch theme';
+        const query = jumpSearch.value.trim().toLocaleLowerCase();
+        visible = [...sections.map(([label, id]) => ({label, id})), {label: themeLabel, action: true}]
+          .filter(item => item.label.toLocaleLowerCase().includes(query));
+        jumpList.replaceChildren();
+        if (!visible.length) {
+          const empty = document.createElement('li');
+          empty.className = 'jump-empty';
+          empty.textContent = 'No matches';
+          jumpList.append(empty);
+          setActive(-1);
+          return;
+        }
+        visible.forEach((item, index) => {
+          const option = document.createElement('li');
+          option.id = `jump-option-${index}`;
+          option.setAttribute('role', 'option');
+          option.setAttribute('aria-selected', 'false');
+          const label = document.createElement('span');
+          label.textContent = item.label;
+          const hint = document.createElement('span');
+          hint.className = 'jump-hint';
+          hint.textContent = item.action ? 'action' : 'section';
+          option.append(label, hint);
+          option.addEventListener('pointerenter', () => setActive(index));
+          option.addEventListener('click', () => activate(index));
+          jumpList.append(option);
+        });
+        setActive(0);
+      };
+      const openJump = (trigger) => {
+        if (document.getElementById('caseDialog')?.open) return;
+        if (jumpDialog.open) { jumpDialog.close(); return; }
+        opener = trigger instanceof HTMLElement ? trigger : jumpOpen;
+        chosen = false;
+        jumpSearch.value = '';
+        render();
+        jumpDialog.showModal();
+        jumpSearch.focus();
+      };
+      jumpOpen.addEventListener('click', () => openJump(jumpOpen));
+      document.addEventListener('keydown', event => {
+        const shortcut = event.key.toLowerCase() === 'k' && (isApple ? event.metaKey : event.ctrlKey) && !event.altKey && !(isApple ? event.ctrlKey : event.metaKey);
+        const target = event.target;
+        const editing = target instanceof Element && (target.matches('input,textarea,select') || target.closest('[contenteditable]:not([contenteditable="false"])'));
+        if (shortcut || (event.key === '/' && !editing && !event.metaKey && !event.ctrlKey && !event.altKey)) {
+          if (document.getElementById('caseDialog')?.open) return;
+          event.preventDefault();
+          openJump(document.activeElement);
+        }
+      });
+      jumpSearch.addEventListener('input', render);
+      jumpSearch.addEventListener('keydown', event => {
+        if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
+          event.preventDefault();
+          if (visible.length) setActive((activeIndex + (event.key === 'ArrowDown' ? 1 : -1) + visible.length) % visible.length);
+        } else if (event.key === 'Enter') {
+          event.preventDefault();
+          activate(activeIndex);
+        }
+      });
+      jumpDialog.addEventListener('click', event => { if (event.target === jumpDialog) jumpDialog.close(); });
+      jumpDialog.addEventListener('close', () => {
+        if (!chosen && opener?.isConnected) opener.focus();
+        opener = null;
+      });
+    }
+  } catch (err) {
+    console.error('Jump menu setup failed', err);
+  }
+
+  try {
+    const finePointer = window.matchMedia('(hover:hover) and (pointer:fine)');
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const cards = document.querySelectorAll('.work-card');
+    const pending = new Map();
+    const onPointerMove = (event) => {
+      const card = event.currentTarget;
+      const frame = card.querySelector('.browser-frame');
+      if (!frame) return;
+      const point = {x: event.clientX, y: event.clientY};
+      const previous = pending.get(card);
+      if (previous) cancelAnimationFrame(previous);
+      pending.set(card, requestAnimationFrame(() => {
+        const rect = frame.getBoundingClientRect();
+        frame.style.setProperty('--mx', `${point.x - rect.left}px`);
+        frame.style.setProperty('--my', `${point.y - rect.top}px`);
+        pending.delete(card);
+      }));
+    };
+    const syncShine = () => {
+      cards.forEach(card => {
+        card.removeEventListener('pointermove', onPointerMove);
+        if (finePointer.matches && !reducedMotion.matches) card.addEventListener('pointermove', onPointerMove);
+      });
+      if (!finePointer.matches || reducedMotion.matches) {
+        pending.forEach(id => cancelAnimationFrame(id));
+        pending.clear();
+      }
+    };
+    syncShine();
+    finePointer.addEventListener('change', syncShine);
+    reducedMotion.addEventListener('change', syncShine);
+  } catch (err) {
+    console.error('Work card shine setup failed', err);
+  }
+
+  window.addEventListener('load', () => setTimeout(() => {
+    try {
+      const readout = document.getElementById('pageReadout');
+      const navigation = performance.getEntriesByType('navigation')[0];
+      const elapsed = navigation?.loadEventEnd / 1000;
+      if (!readout || !Number.isFinite(elapsed) || elapsed <= 0) return;
+      const entries = [navigation, ...performance.getEntriesByType('resource')];
+      const sum = key => entries.reduce((total, entry) => total + (Number.isFinite(entry?.[key]) && entry[key] > 0 ? entry[key] : 0), 0);
+      const bytes = sum('transferSize') || sum('encodedBodySize');
+      const time = elapsed < 0.1 ? 'under 0.1 s' : `${elapsed.toFixed(1)} s`;
+      const size = bytes > 0 ? ` · ${Math.round(bytes / 1024)} KB transferred` : '';
+      readout.textContent = `This page loaded in ${time}${size}, measured just now in your browser.`;
+      readout.hidden = false;
+    } catch (err) {}
+  }, 0));
 
   try {
     const grid = document.getElementById('projectGrid');
